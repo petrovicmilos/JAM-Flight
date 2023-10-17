@@ -1,0 +1,45 @@
+<div class="banner">
+    <div class="banner-img">
+        <span style="color: #ffffffff">Best deals are waiting for you</span>
+    </div>
+
+</div>
+<!-- <div class="search-banner">
+    <div class="search-card">
+        <form (ngSubmit)="onSubmit()" class="search-form">
+            <ng-container
+                *ngFor="let input of (advancedSearch ? searchInputs : searchInputs.slice(0, 4)); let i = index">
+                <input [placeholder]="input.label" [(ngModel)]="input.value" [name]="input.label">
+            </ng-container>
+            <div class="advanced-search-toggle">
+                <button (click)="toggleAdvancedSearch()" class="arrow-icon">
+                    <mat-icon>{{ advancedSearch ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</mat-icon>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+ -->
+
+ <div class="search-banner">
+    <div class="search-card">
+      <form (ngSubmit)="onSubmit()" class="search-form">
+        <ng-container *ngFor="let input of (advancedSearch ? searchInputs : searchInputs.slice(0, 4)); let i = index">
+          <input [placeholder]="input.label" [(ngModel)]="input.value" [name]="input.label">
+        </ng-container>
+        <!-- Dodajte dugme za naprednu pretragu -->
+        <div class="advanced-search-toggle">
+          <button (click)="toggleAdvancedSearch()" class="arrow-icon">
+            <mat-icon>{{ advancedSearch ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</mat-icon>
+          </button>
+        </div>
+      </form>
+      <!-- Dodajte dodatne inpute za naprednu pretragu unutar div-a ako je advancedSearch true -->
+      <div *ngIf="advancedSearch" class="advanced-inputs">
+        <ng-container *ngFor="let input of searchInputs.slice(4); let i = index">
+          <input [placeholder]="input.label" [(ngModel)]="input.value" [name]="input.label">
+        </ng-container>
+      </div>
+    </div>
+  </div>
+  

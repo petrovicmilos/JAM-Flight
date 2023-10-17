@@ -1,0 +1,123 @@
+/* Style the card and form */
+.banner {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  height: 700px;
+  z-index: -1;
+  display: block;
+  box-sizing: border-box;
+}
+
+.banner-img {
+  background: linear-gradient(to top, #0096872a, #0096872a), url("../../assets/banner-photo.jfif");
+  /* background-image: url("../../assets/banner-photo.jfif"); */
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  vertical-align: top;
+  border-radius: 10px;
+  border: none;
+  opacity: 1;
+}
+
+.banner-img span {
+  margin-top: 5%;
+  font-size: 50px;
+  font-family: "DM Sans";
+}
+
+.search-banner {
+  background-color: white;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: left;
+  width: 60%;
+  height: 120px;
+  margin-top: -50px;
+  position: relative;
+  z-index: 1;
+}
+
+.search-card {
+  display: flex;
+  width: 100%;
+}
+
+.search-form {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.search-form input {
+  border: none;
+  outline: none;
+  margin-right: 10px;
+  width: 150px;
+  font-size: 15px;
+}
+
+.search-form input:not(:last-of-type) {
+  border-right: 1px solid black;
+}
+
+.search-form input:not(:first-of-type) {
+  margin-left: -100px;
+}
+
+/* Dodajte stil za dodatne inpute */
+.advanced-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px; /* Dodajte razmak između prvih 4 inputa i dodatnih inputa */
+}
+
+.advanced-inputs input {
+  border: none;
+  outline: none;
+  margin-right: 10px;
+  width: 150px;
+  font-size: 15px;
+}
+
+/* Style the advanced search toggle button */
+/* Style the advanced search toggle button */
+.advanced-search-toggle {
+  cursor: pointer;
+}
+
+/* Style the search button */
+.search-button {
+  background-color: #009688 !important;
+  color: white;
+  text-align: center;
+  border-radius: 10%;
+  /* Make it round */
+  height: 60px;
+  padding: 0 20px 0 15px;
+  cursor: pointer;
+  margin-right: -30px;
+}
+
+.search-button:hover {
+  background-color: #02685e !important;
+}
+
+/* Style the arrow icon inside the button */
+.arrow-icon {
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #009688;
+  /* Adjust the size of the arrow icon as needed */
+}

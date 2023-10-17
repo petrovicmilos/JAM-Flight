@@ -1,0 +1,33 @@
+<div class="flights-list">
+    <h2>Search for flight</h2>
+    <table class="flight-table">
+        <thead>
+          <tr>
+            <th>Airline</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Duration</th>
+            <th>Distance</th>
+            <th>Class</th>
+            <th>Available Seats</th>
+            <th>Price Range</th>
+            <th>Rating</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let flight of flights">
+            <td>{{ flight.airline }}</td>
+            <td>{{ flight.departureLocation }}</td>
+            <td>{{ flight.arrivalLocation }}</td>
+            <td>{{ flight.duration }}</td>
+            <td>{{ flight.distance }}</td>
+            <td>{{ flight.flightClass }}</td>
+            <td>{{ flight.availableSeats }}</td>
+            <td>{{ flight.priceRange }}</td>
+            <td>{{ flight.rating }}</td>
+            <td><button class="add-to-cart">Add to cart</button></td>
+          </tr>
+        </tbody>
+      </table>
+</div>
