@@ -1,12 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
+import { Observable } from 'rxjs';
+import { Flight } from './flights-list.model';
 
 @Component({
   selector: 'app-flights-list',
   templateUrl: './flights-list.component.html',
   styleUrls: ['./flights-list.component.css']
 })
-export class FlightsListComponent {
-  flights: any[] = [
+export class FlightsListComponent implements OnInit{
+  flights: Flight[] = [
     {
       airline: 'Turkish Airlines',
       departureLocation: 'Departure 1',
@@ -117,5 +120,22 @@ export class FlightsListComponent {
       priceRange: '$320 - $520',
       rating: 4.8
     }
-  ];  
+  ];
+
+
+  filteredFlights$: Observable<Flight[]>;
+
+  constructor(private dataService: DataService) {}
+
+  ngOnInit() {
+    // { filter } === [{filths}]
+    // this.filteredFlights$ = this.dataService.getFilteredData(this.flights);
+
+    this.dataService.filterCriteria$.pipe().subscribe((filterItem: Flight) => {
+    //   console.log('filter', filterItem);
+      this.filteredFlights$ = this.dataService.getFilteredData(this.flights);
+    });
+
+
+  }
 }

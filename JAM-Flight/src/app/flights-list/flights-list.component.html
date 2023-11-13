@@ -16,7 +16,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let flight of flights">
+          <tr *ngFor="let flight of filteredFlights$ | async">
             <td>{{ flight.airline }}</td>
             <td>{{ flight.departureLocation }}</td>
             <td>{{ flight.arrivalLocation }}</td>

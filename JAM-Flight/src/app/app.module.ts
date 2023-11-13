@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -15,6 +15,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { FlightsListComponent } from './flights-list/flights-list.component';
 import { FooterComponent } from './footer/footer.component';
 import { PopularComponent } from './popular/popular.component';
+import { DataService } from './data.service';
 
 @NgModule({
   declarations: [
@@ -33,9 +34,10 @@ import { PopularComponent } from './popular/popular.component';
     MatButtonModule,
     MatCardModule,
     MatIconModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
