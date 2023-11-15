@@ -16,16 +16,14 @@ export class DataService {
   getFilteredData(data: Flight[]): Observable<Flight[]> {
     return this.filterCriteria$.pipe(
       map((filterCriteria: Flight) => {
-        let a = data.filter((row: Flight) => {
+        return data.filter((row: Flight) => {
           return Object.keys(filterCriteria).every(key => {
-            const value = row[key];
-            const filterValue = filterCriteria[key];
-            if (!filterValue) return;
+            const value = row[key]?.toString().toLowerCase();
+            const filterValue = filterCriteria[key]?.toString().toLowerCase();
+            if (!filterValue) return true; // Keep the row if there is no filter value
             return value.toString().includes(filterValue);
           });
         });
-        console.log('a', a);
-        return  a;
       })
     );
   }

@@ -39,8 +39,7 @@
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
-  justify-content: left;
-  width: 90%;
+  width: 95%;
   height: 120px;
   margin-top: -50px;
   position: relative;
@@ -70,52 +69,32 @@
   border-radius: 5px;
   outline: none;
   box-shadow: inset 0 0 10px #f3f2f2;
-  margin-right: 10px;
   padding: 15px;
-  width: 150px;
+  width: 120px;
   font-size: 15px;
 }
 
-.search-form input:not(:last-of-type) {
-  border-right: 1px solid black;
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
+
 
 .search-form input:not(:first-of-type) {
   margin-left: -100px;
 }
-
-/* Dodajte stil za dodatne inpute */
-.advanced-inputs {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 10px; /* Dodajte razmak između prvih 4 inputa i dodatnih inputa */
-}
-
-.advanced-inputs input {
-  border: none;
-  outline: none;
-  margin-right: 10px;
-  width: 150px;
-  font-size: 15px;
-}
-
-/* Style the advanced search toggle button */
-/* Style the advanced search toggle button */
-.advanced-search-toggle {
-  cursor: pointer;
-}
-
 /* Style the search button */
 .search-button {
   background-color: #009688 !important;
   color: white;
   text-align: center;
   border-radius: 10%;
+  border: none;
   /* Make it round */
-  height: 60px;
-  padding: 0 20px 0 15px;
+  height: 45px;
+  padding: 0 8px 0 8px;
   cursor: pointer;
-  margin-right: -30px;
 }
 
 .search-button:hover {
