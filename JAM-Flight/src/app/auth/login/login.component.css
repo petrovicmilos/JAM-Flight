@@ -1,0 +1,58 @@
+/* Style for the login form container */
+.login-container {
+    width: 500px; /* Increase the width */
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 30px; /* Increase the padding for more space */
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Style for form fields */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .form-group input {
+    width: 90%;
+    padding: 12px; /* Increase the padding for input fields */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.2s;
+    font-size: 16px; /* Increase font size for better visibility */
+  }
+  
+  .form-group input:focus {
+    border-color: #007BFF;
+  }
+  
+  /* Style for the login button */
+  .login-button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 12px 20px; /* Increase the padding for the button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px; /* Increase font size for the button */
+  }
+  
+  .login-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .error-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+  }

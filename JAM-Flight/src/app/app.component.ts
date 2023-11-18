@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {UserService} from "./auth/user.service";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'JAM-Flight';
+
+  constructor(public userService: UserService){};
+
+  loggedIn : boolean = false;
+
+  setLoggedIn( value : boolean){
+    this.loggedIn = value;
+  }
 }

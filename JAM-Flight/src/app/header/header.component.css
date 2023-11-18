@@ -1,0 +1,74 @@
+.header {
+    background-color: #fff; /* White background */
+    color: #333; /* Text color */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center vertically */
+    margin-top: 20px; /* Add margin from the top */
+}
+
+/* Style for the logo (JAMFlights) */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #009688;
+}
+
+/* Style for the login and sign up buttons */
+.buttons {
+    display: flex;
+}
+
+.login-button, .signup-button {
+    margin-left: 10px;
+}
+
+/* Style for button links */
+.login-button, .signup-button {
+    margin-left: 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.login-button {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+}
+
+.signup-button {
+    background-color: #fff; /* White background */
+    color: #000; /* Black text */
+}
+
+/* Hover styles for buttons */
+.login-button:hover {
+    background-color: #222; /* Darker background on hover */
+}
+
+.signup-button:hover {
+    background-color: #eee; /* Lighter background on hover */
+}
+
+.cart {
+    display: flex;
+    align-items: center; /* Center vertically */
+}
+
+.cart-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    background-color: #fff; /* White background */
+    color: #000; /* Black text */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.cart-icon {
+    font-size: 24px;
+    margin-right: 5px; /* Add a small margin between icon and button text */
+}

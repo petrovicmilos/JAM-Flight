@@ -16,6 +16,11 @@ import { FlightsListComponent } from './flights-list/flights-list.component';
 import { FooterComponent } from './footer/footer.component';
 import { PopularComponent } from './popular/popular.component';
 import { DataService } from './data.service';
+import {HeaderComponent} from "./header/header.component";
+import { UserService } from './auth/user.service';
+import {HomepageComponent} from "./homepage/homepage.component";
+import {LoginComponent} from "./auth/login/login.component";
+import {SignupComponent} from "./auth/signup/signup.component";
 
 @NgModule({
   declarations: [
@@ -24,7 +29,11 @@ import { DataService } from './data.service';
     BannerComponent,
     FlightsListComponent,
     FooterComponent,
-    PopularComponent
+    PopularComponent,
+    HeaderComponent,
+    HomepageComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +46,7 @@ import { DataService } from './data.service';
     BrowserAnimationsModule,
     ReactiveFormsModule
   ],
-  providers: [DataService],
+  providers: [DataService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
