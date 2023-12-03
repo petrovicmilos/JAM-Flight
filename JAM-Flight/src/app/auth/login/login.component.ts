@@ -39,7 +39,7 @@ export class LoginComponent {
     }  */
 
     errorExists = false;
-  errorText = "";
+    errorText = "";
 
   constructor(public userService: UserService, private router: Router, private AppComponent :  AppComponent ) {}
 
@@ -52,7 +52,7 @@ export class LoginComponent {
     var user = this.userService.getUser(email);
     if(!user) {
       this.errorExists = true;
-      this.errorText = "There is no registered user with this email." + email;
+      this.errorText = "There is no registered user with this email: " + email;
       return;
     }
 

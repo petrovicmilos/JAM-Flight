@@ -1,1 +1,30 @@
-<p>signup works!</p>
+<div id="signup-page">
+    <div class="signup-container" data-aos="fade-up" data-aos-duration="500">
+      <div class="form-banner">
+        <img src="../../../assets/paper-airplane.png" alt="paper airplane">
+      </div>
+      <h2>Sign up</h2>
+      <div class="form">
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+          <p ngif="errorExists" class="error-message">{{ errorText }}</p>
+          <div class="form-group">
+            <input type="text" placeholder="Enter your name" id="name" name="name" ngModel required
+              #emailinput="ngModel">
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Enter your email address" id="email" name="email" ngModel required
+              #emailinput="ngModel">
+          </div>
+          <div class="form-group">
+            <input type="password" id="password" name="password" placeholder="Enter your password" ngModel required
+              #passInput="ngModel">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Enter your phone number" id="phone" name="phone" ngModel required
+              #emailinput="ngModel">
+          </div>
+          <button type="submit" class="signup-button">Register</button>
+        </form>
+      </div>
+    </div>
+  </div>
