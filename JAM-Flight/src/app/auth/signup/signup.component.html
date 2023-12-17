@@ -9,7 +9,7 @@
           <p ngif="errorExists" class="error-message">{{ errorText }}</p>
           <div class="form-group">
             <input type="text" placeholder="Enter your name" id="name" name="name" ngModel required
-              #emailinput="ngModel">
+              #nameinput="ngModel">
           </div>
           <div class="form-group">
             <input type="email" placeholder="Enter your email address" id="email" name="email" ngModel required
@@ -21,7 +21,7 @@
           </div>
           <div class="form-group">
             <input type="text" placeholder="Enter your phone number" id="phone" name="phone" ngModel required
-              #emailinput="ngModel">
+              #phoneinput="ngModel">
           </div>
           <button type="submit" class="signup-button">Register</button>
         </form>

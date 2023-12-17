@@ -20,14 +20,16 @@ ngOnInit(): void {
 }
 
 onSubmit(form : NgForm) {
+  var name = form.value.name;
   var email = form.value.email;
   var password = form.value.password;
-  var user = this.userService.getUser(email);
-  if(!user) {
-    this.errorExists = true;
-    this.errorText = "There is no registered user with this email: " + email;
-    return;
-  }
+  // var user = this.userService.getUser(email);
+  var phone = form.value.phone;
+  // if(!user) {
+  //   this.errorExists = true;
+  //   this.errorText = "There is no registered user with this email: " + email;
+  //   return;
+  // }
 
   var isPasswordValid = this.userService.isPasswordCorrect(email, password);
   if(!isPasswordValid) {
