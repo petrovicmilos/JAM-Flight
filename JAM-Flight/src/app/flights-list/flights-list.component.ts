@@ -2,6 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { Observable } from 'rxjs';
 import { Flight } from './flights-list.model';
+import { CartService } from '../cart.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-flights-list',
@@ -11,6 +13,7 @@ import { Flight } from './flights-list.model';
 export class FlightsListComponent implements OnInit{
   flights: Flight[] = [
     {
+      id: 0,
       airline: 'Turkish Airlines',
       departureLocation: 'Departure 1',
       arrivalLocation: 'Arrival 1',
@@ -22,6 +25,7 @@ export class FlightsListComponent implements OnInit{
       rating: 4.5
     },
     {
+      id: 1,
       airline: 'Emirates',
       departureLocation: 'Departure 2',
       arrivalLocation: 'Arrival 2',
@@ -33,6 +37,7 @@ export class FlightsListComponent implements OnInit{
       rating: 4.8
     },
     {
+      id: 2,
       airline: 'Lufthansa',
       departureLocation: 'Departure 3',
       arrivalLocation: 'Arrival 3',
@@ -44,6 +49,7 @@ export class FlightsListComponent implements OnInit{
       rating: 4.2
     },
     {
+      id: 3,
       airline: 'Qatar Airways',
       departureLocation: 'Departure 4',
       arrivalLocation: 'Arrival 4',
@@ -55,6 +61,7 @@ export class FlightsListComponent implements OnInit{
       rating: 4.9
     },
     {
+      id: 4,
       airline: 'Delta Air Lines',
       departureLocation: 'Departure 5',
       arrivalLocation: 'Arrival 5',
@@ -66,6 +73,7 @@ export class FlightsListComponent implements OnInit{
       rating: 4.4
     },
     {
+      id: 5,
       airline: 'British Airways',
       departureLocation: 'Departure 6',
       arrivalLocation: 'Arrival 6',
@@ -77,6 +85,7 @@ export class FlightsListComponent implements OnInit{
       rating: 4.7
     },
     {
+      id: 6,
       airline: 'American Airlines',
       departureLocation: 'Departure 7',
       arrivalLocation: 'Arrival 7',
@@ -88,6 +97,7 @@ export class FlightsListComponent implements OnInit{
       rating: 4.3
     },
     {
+      id: 7,
       airline: 'Singapore Airlines',
       departureLocation: 'Departure 8',
       arrivalLocation: 'Arrival 8',
@@ -99,6 +109,7 @@ export class FlightsListComponent implements OnInit{
       rating: 4.9
     },
     {
+      id: 8,
       airline: 'Air France',
       departureLocation: 'Departure 9',
       arrivalLocation: 'Arrival 9',
@@ -110,6 +121,7 @@ export class FlightsListComponent implements OnInit{
       rating: 4.6
     },
     {
+      id: 9,
       airline: 'Cathay Pacific',
       departureLocation: 'Departure 10',
       arrivalLocation: 'Arrival 10',
@@ -125,7 +137,7 @@ export class FlightsListComponent implements OnInit{
 
   filteredFlights$: Observable<Flight[]>;
 
-  constructor(private dataService: DataService) {}
+  constructor(private dataService: DataService, private cartService: CartService, private router: Router) {}
 
   ngOnInit() {
     // { filter } === [{filths}]
@@ -137,5 +149,13 @@ export class FlightsListComponent implements OnInit{
     });
 
 
+  }
+  addToCart(flightId: number) {
+    const selectedFlight = this.flights.find((flight) => flight.id === flightId);
+
+    if (selectedFlight) {
+      this.cartService.addToCart(selectedFlight);
+      this.router.navigate(['/cart']);
+    }
   }
 }

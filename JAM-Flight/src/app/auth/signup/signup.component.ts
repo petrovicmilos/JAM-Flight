@@ -19,24 +19,17 @@ constructor(public userService: UserService, private router: Router, private App
 ngOnInit(): void {
 }
 
-onSubmit(form : NgForm) {
-  var name = form.value.name;
-  var email = form.value.email;
-  var password = form.value.password;
-  // var user = this.userService.getUser(email);
-  var phone = form.value.phone;
-  // if(!user) {
-  //   this.errorExists = true;
-  //   this.errorText = "There is no registered user with this email: " + email;
-  //   return;
-  // }
+signUpObj: any = {
+  name: '',
+  email: '' ,
+  password: '' ,
+  phone: ''
+}
 
-  var isPasswordValid = this.userService.isPasswordCorrect(email, password);
-  if(!isPasswordValid) {
-    this.errorExists = true;
-    this.errorText = "Incorrect password!";
-    return;
-  }
+onSubmit(form : NgForm) {
+
+  
+ 
   this.errorExists = false;
   this.router.navigate(['']);
 

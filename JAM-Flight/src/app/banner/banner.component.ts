@@ -11,6 +11,7 @@ import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
 export class BannerComponent implements OnInit{
 
   searchCriteria:Flight= {
+    id: null,
     airline: '',
     departureLocation: '',
     arrivalLocation: '',

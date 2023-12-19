@@ -21,6 +21,7 @@ import { UserService } from './auth/user.service';
 import {HomepageComponent} from "./homepage/homepage.component";
 import {LoginComponent} from "./auth/login/login.component";
 import {SignupComponent} from "./auth/signup/signup.component";
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {SignupComponent} from "./auth/signup/signup.component";
     HeaderComponent,
     HomepageComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
