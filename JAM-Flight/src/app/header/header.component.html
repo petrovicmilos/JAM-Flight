@@ -4,6 +4,7 @@
     <div class="buttons">
         <div class="cart">
             <a class="cart-link" href="#" [routerLink]="'cart'">
+                <span class="cart-count" *ngIf="cartItemCount > 0">{{ cartItemCount }}</span>
                 <i class="cart-icon fas fa-shopping-cart"></i> <!-- Cart icon from Font Awesome -->
                 Cart
             </a>

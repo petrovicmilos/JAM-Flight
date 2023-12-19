@@ -27,7 +27,7 @@ signUpObj: any = {
 }
 
 onSubmit(form : NgForm) {
-
+  this.userService.getUser
   
  
   this.errorExists = false;

@@ -155,7 +155,7 @@ export class FlightsListComponent implements OnInit{
 
     if (selectedFlight) {
       this.cartService.addToCart(selectedFlight);
-      this.router.navigate(['/cart']);
+      //this.router.navigate(['/cart']);
     }
   }
 }

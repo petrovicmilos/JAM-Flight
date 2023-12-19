@@ -74,3 +74,10 @@
   font-size: 24px;
   margin-right: 5px; /* Add a small margin between icon and button text */
 }
+
+.cart-count {
+  border-radius: 50%;
+  width: 20px;
+  background-color: #009688;
+  text-align: center;
+}
