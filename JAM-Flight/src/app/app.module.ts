@@ -24,6 +24,8 @@ import {SignupComponent} from "./auth/signup/signup.component";
 import { CartComponent } from './cart/cart.component';
 import { ContactComponent } from './contact/contact.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { FaqComponent } from './faq/faq.component';
+import { BlogComponent } from './blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     LoginComponent,
     SignupComponent,
     CartComponent,
-    ContactComponent
+    ContactComponent,
+    FaqComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,
