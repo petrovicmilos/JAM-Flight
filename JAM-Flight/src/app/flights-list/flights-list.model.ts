@@ -7,6 +7,6 @@ export interface Flight {
     distance: string;
     flightClass: string;
     availableSeats: number;
-    priceRange: string;
+    price: string;
     rating: number;
 }

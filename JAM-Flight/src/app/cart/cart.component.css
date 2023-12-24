@@ -1,6 +1,9 @@
 .cart {
     text-align: center;
     margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .cart-table {
@@ -44,5 +47,31 @@
     background-color: #00964349;
     padding: 5px;
     cursor: pointer;
+  }
+
+  .cart-total {
+    display: flex;
+    justify-content: right;
+    margin-top: 30%;
+    padding: 10px;
+    align-items: center;
+  }
+
+  .cart-total span {
+    
+  }
+
+  .cart-total button {
+    margin-left: 20px;
+    background-color: #009688;
+    height: 30px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .cart-total button:hover {
+    background-color: #02685e !important;
   }
   

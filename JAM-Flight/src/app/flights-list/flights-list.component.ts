@@ -21,7 +21,7 @@ export class FlightsListComponent implements OnInit{
       distance: '500 miles',
       flightClass: 'Economy',
       availableSeats: 100,
-      priceRange: '$100 - $200',
+      price: '$100',
       rating: 4.5
     },
     {
@@ -33,7 +33,7 @@ export class FlightsListComponent implements OnInit{
       distance: '700 miles',
       flightClass: 'Business',
       availableSeats: 80,
-      priceRange: '$300 - $500',
+      price: '$300',
       rating: 4.8
     },
     {
@@ -45,7 +45,7 @@ export class FlightsListComponent implements OnInit{
       distance: '600 miles',
       flightClass: 'Economy',
       availableSeats: 120,
-      priceRange: '$150 - $250',
+      price: '$150',
       rating: 4.2
     },
     {
@@ -57,7 +57,7 @@ export class FlightsListComponent implements OnInit{
       distance: '800 miles',
       flightClass: 'First Class',
       availableSeats: 50,
-      priceRange: '$600 - $800',
+      price: '$600',
       rating: 4.9
     },
     {
@@ -69,7 +69,7 @@ export class FlightsListComponent implements OnInit{
       distance: '600 miles',
       flightClass: 'Economy',
       availableSeats: 90,
-      priceRange: '$120 - $220',
+      price: '$120',
       rating: 4.4
     },
     {
@@ -81,7 +81,7 @@ export class FlightsListComponent implements OnInit{
       distance: '700 miles',
       flightClass: 'Business',
       availableSeats: 75,
-      priceRange: '$280 - $480',
+      price: '$280',
       rating: 4.7
     },
     {
@@ -93,7 +93,7 @@ export class FlightsListComponent implements OnInit{
       distance: '500 miles',
       flightClass: 'Economy',
       availableSeats: 110,
-      priceRange: '$110 - $210',
+      price: '$110',
       rating: 4.3
     },
     {
@@ -105,7 +105,7 @@ export class FlightsListComponent implements OnInit{
       distance: '900 miles',
       flightClass: 'First Class',
       availableSeats: 60,
-      priceRange: '$700 - $900',
+      price: '$700',
       rating: 4.9
     },
     {
@@ -117,7 +117,7 @@ export class FlightsListComponent implements OnInit{
       distance: '600 miles',
       flightClass: 'Economy',
       availableSeats: 95,
-      priceRange: '$130 - $230',
+      price: '$130',
       rating: 4.6
     },
     {
@@ -129,7 +129,7 @@ export class FlightsListComponent implements OnInit{
       distance: '800 miles',
       flightClass: 'Business',
       availableSeats: 70,
-      priceRange: '$320 - $520',
+      price: '$340',
       rating: 4.8
     }
   ];

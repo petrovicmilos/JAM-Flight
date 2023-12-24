@@ -22,6 +22,8 @@ import {HomepageComponent} from "./homepage/homepage.component";
 import {LoginComponent} from "./auth/login/login.component";
 import {SignupComponent} from "./auth/signup/signup.component";
 import { CartComponent } from './cart/cart.component';
+import { ContactComponent } from './contact/contact.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { CartComponent } from './cart/cart.component';
     HomepageComponent,
     LoginComponent,
     SignupComponent,
-    CartComponent
+    CartComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,8 @@ import { CartComponent } from './cart/cart.component';
     MatCardModule,
     MatIconModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSnackBarModule,
   ],
   providers: [DataService, UserService],
   bootstrap: [AppComponent]

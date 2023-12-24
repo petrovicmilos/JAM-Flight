@@ -19,7 +19,7 @@ export class BannerComponent implements OnInit{
     distance: '',
     flightClass: '',
     availableSeats: 0,
-    priceRange: '',
+    price: '',
     rating: 0
   };
 
@@ -46,7 +46,7 @@ export class BannerComponent implements OnInit{
       distance: new FormControl (),
       flightClass: new FormControl (),
       availableSeats: new FormControl (),
-      priceRange: new FormControl (),
+      price: new FormControl (),
       rating: new FormControl ()
     });
   }

@@ -1,0 +1,71 @@
+.contact {
+    margin: 0 auto;
+    margin-top: 60px;
+    padding: 30px;
+    /* Increase the padding for more space */
+    border: none;
+    border-radius: 10px;
+    opacity: 0.8;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    min-width: 400px;
+    height: 380px;
+}
+
+.contact-form {
+    margin-top: 70px;
+}
+
+.form-group input {
+    width: 70%;
+    padding: 12px;
+    /* Increase the padding for input fields */
+    border: none;
+    border-bottom: 0.2px solid rgb(185, 185, 185);
+    transition: border-color 0.2s;
+    font-size: 16px;
+    /* Increase font size for better visibility */
+    outline: none;
+    margin-bottom: 10px;
+}
+
+.form-group textarea {
+    width: 70%;
+    border: none;
+    /* padding: 20px; */
+    border-bottom: 0.2px solid rgb(185, 185, 185);
+    transition: border-color 0.2s;
+    font-size: 16px;
+    resize: none;
+    outline: none;
+    margin-bottom: 10px;
+    
+}
+/* .form-group textarea::placeholder {
+  transform: translateY(30px);
+} */
+
+.form-group button {
+    background-color: #009688;
+    color: #fff;
+    padding: 12px 20px;
+    /* Increase the padding for the button */
+    border: none;
+    border-radius: 10px;
+    width: 50%;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.contact-title h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    width: 100%;
+}
+
+button {}

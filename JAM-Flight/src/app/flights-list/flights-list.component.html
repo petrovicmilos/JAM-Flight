@@ -10,7 +10,7 @@
             <th>Distance</th>
             <th>Class</th>
             <th>Available Seats</th>
-            <th>Price Range</th>
+            <th>Price</th>
             <th>Rating</th>
             <th>Action</th>
           </tr>
@@ -24,7 +24,7 @@
             <td>{{ flight.distance }}</td>
             <td>{{ flight.flightClass }}</td>
             <td>{{ flight.availableSeats }}</td>
-            <td>{{ flight.priceRange }}</td>
+            <td>{{ flight.price }}</td>
             <td>{{ flight.rating }}</td>
             <td><button class="add-to-cart" (click)="addToCart(flight.id)">Add to cart</button></td>
           </tr>
