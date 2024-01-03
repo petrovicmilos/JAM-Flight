@@ -2,7 +2,10 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../user.service';
 import { AppComponent } from '../../app.component';
+import { DataService } from 'src/app/data.service';
 import { NgForm } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
+
 
 @Component({
   selector: 'app-login',
@@ -41,7 +44,7 @@ export class LoginComponent {
     errorExists = false;
     errorText = "";
 
-  constructor(public userService: UserService, private router: Router, private AppComponent :  AppComponent ) {}
+  constructor(public userService: UserService, private router: Router, private AppComponent :  AppComponent, private snackBar: MatSnackBar, private DataService: DataService) {}
 
   ngOnInit(): void {
   }
@@ -63,9 +66,20 @@ export class LoginComponent {
       return;
     }
     this.errorExists = false;
-    this.router.navigate(['']);
-
-    this.AppComponent.setLoggedIn(true);
-
+    //this.AppComponent.setLoggedIn(true);
+    this.DataService.setLoggedInSubject();
+    console.log(this.DataService.loggedInSubject$);
+    if (this.DataService.loggedInSubject$) {
+      this.snackBar.open('Successfull login!', 'Dismiss', {
+        duration: 1000,
+        verticalPosition: 'bottom',
+        horizontalPosition: 'center',
+      });
+      //return;
+      setTimeout(() => {
+        this.router.navigate(['']);
+      }, 1000);
+    }
+    
   }
   }

@@ -27,4 +27,15 @@ export class DataService {
       })
     );
   }
+
+  //private loggedInSubject : BehaviorSubject<boolean>;
+  private loggedInSubject = new BehaviorSubject<boolean>(false);
+  loggedInSubject$ = this.loggedInSubject.asObservable();
+  public setLoggedInSubject(){
+    //this.loggedInSubject.next(!this.loggedInSubject.value);
+    this.loggedInSubject.next(true);
+  }
+  public getLoggedInSubject(){
+    return this.loggedInSubject.value;
+  }
 }
