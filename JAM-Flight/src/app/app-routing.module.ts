@@ -7,6 +7,7 @@ import { CartComponent } from './cart/cart.component';
 import { ContactComponent } from './contact/contact.component';
 import { BlogComponent } from './blog/blog.component';
 import { FaqComponent } from './faq/faq.component';
+import { FlightHistoryComponent } from './flight-history/flight-history.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent},
   { path: 'blog', component: BlogComponent},
   { path: 'faq', component: FaqComponent},
+  { path: 'flight-history', component: FlightHistoryComponent},
   { path: '',redirectTo: 'homepage', pathMatch: 'full'}
 ];
 

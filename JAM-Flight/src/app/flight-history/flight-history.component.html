@@ -1,1 +1,39 @@
-<p>flight-history works!</p>
+<div class="cart">
+    <h2>Shopping Cart</h2>
+    <!-- <ul>
+      <li *ngFor="let item of cartItems">
+        {{ item.airline }} - {{ item.priceRange }}
+      </li>
+    </ul> -->
+    <table class="cart-table">
+      <thead>
+        <tr>
+          <th>Airline</th>
+          <th>From</th>
+          <th>To</th>
+          <th>Duration</th>
+          <th>Distance</th>
+          <th>Class</th>
+          <th>Available Seats</th>
+          <th>Price</th>
+          <th>Rating</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of cartItems">
+          <td>{{ item.airline }}</td>
+          <td>{{ item.departureLocation }}</td>
+          <td>{{ item.arrivalLocation }}</td>
+          <td>{{ item.duration }}</td>
+          <td>{{ item.distance }}</td>
+          <td>{{ item.flightClass }}</td>
+          <td>{{ item.availableSeats }}</td>
+          <td>{{ item.price }}</td>
+          <td>{{ item.rating }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="cart-total">
+    </div>
+  </div>  
