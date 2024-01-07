@@ -1,42 +1,59 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import { DataService } from '../data.service';
+import { Flight } from '../flights-list/flights-list.model';
+import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-flight-search',
   templateUrl: './banner.component.html',
   styleUrls: ['./banner.component.css']
 })
-export class BannerComponent {
-  searchCriteria = {
-    airCompany: '',
-    from: '',
-    to: '',
-    price: '',
-    time: '',
+export class BannerComponent implements OnInit{
+
+  searchCriteria:Flight= {
+    id: null,
+    airline: '',
+    departureLocation: '',
+    arrivalLocation: '',
+    duration: '',
     distance: '',
-    seats: '',
-    rating: ''
+    flightClass: '',
+    availableSeats: 0,
+    price: '',
+    rating: 0
   };
 
-  searchInputs = [
-    { label: 'Air Company', value: '' },
-    { label: 'From', value: '' },
-    { label: 'To', value: '' },
-    { label: 'Price', value: '' },
-    { label: 'Time', value: '' },
-    { label: 'Distance', value: '' },
-    { label: 'Number of Seats', value: '' },
-    { label: 'Rating', value: '' },
-  ];
+  // searchInputs = [
+  //   { label: 'Air Company', value: 'airCompany' },
+  //   { label: 'From', value: 'from' },
+  //   { label: 'To', value: 'to' },
+  //   { label: 'Price', value: 'price' },
+  //   { label: 'Time', value: 'time' },
+  //   { label: 'Distance', value: 'distance' },
+  //   { label: 'Number of Seats', value: 'seats' },
+  //   { label: 'Rating', value: 'rating' },
+  // ];
 
-  advancedSearch = false;
+  form:FormGroup;
+  constructor(private dataService: DataService, private formBuilder:FormBuilder) {}
 
-  toggleAdvancedSearch() {
-    this.advancedSearch = !this.advancedSearch;
-    console.log("MOOREE");
+  ngOnInit() : void {
+    this.form = this.formBuilder.group({
+      airline: new FormControl (),
+      departureLocation: new FormControl (),
+      arrivalLocation: new FormControl (),
+      duration: new FormControl (),
+      distance: new FormControl (),
+      flightClass: new FormControl (),
+      availableSeats: new FormControl (),
+      price: new FormControl (),
+      rating: new FormControl ()
+    });
   }
 
-  onSubmit() {
-    // Handle form submission here, e.g., send a request to the server with the search criteria
-    console.log('Search criteria:', this.searchCriteria);
+  filterTable() : void {
+    //console.log(this.form.value);
+    if (this.form.invalid) return;
+    this.dataService.setFilterCriteria(this.form.value);
   }
 }

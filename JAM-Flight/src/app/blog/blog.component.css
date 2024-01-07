@@ -1,0 +1,7 @@
+.jumbotron {
+    background-image: url(https://www.travelassociates.com/sites/v2.travel-associates.com.au/files/Flights-small-640x480.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 0 !important;
+    color: black;
+}
