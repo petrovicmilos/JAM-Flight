@@ -26,6 +26,7 @@ import { ContactComponent } from './contact/contact.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FaqComponent } from './faq/faq.component';
 import { BlogComponent } from './blog/blog.component';
+import { FlightHistoryComponent } from './flight-history/flight-history.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { BlogComponent } from './blog/blog.component';
     CartComponent,
     ContactComponent,
     FaqComponent,
-    BlogComponent
+    BlogComponent,
+    FlightHistoryComponent
   ],
   imports: [
     BrowserModule,
