@@ -9,10 +9,9 @@
   margin-top: 30px;
 }
 
-/* Logo styles */
-.footer-left img {
-  max-width: 100px; /* Adjust the logo size as needed */
-  height: auto;
+.footer h4 a {
+  text-decoration: none;
+  color: white;
 }
 
 /* List styles */
