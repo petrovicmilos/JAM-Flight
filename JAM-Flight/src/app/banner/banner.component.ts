@@ -13,6 +13,9 @@ export class BannerComponent implements OnInit{
   searchCriteria:Flight= {
     id: null,
     airline: '',
+    departureDate: '',
+    departureTime: '',
+    arrivalTime: '',
     departureLocation: '',
     arrivalLocation: '',
     duration: '',
