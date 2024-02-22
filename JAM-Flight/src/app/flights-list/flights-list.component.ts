@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Flight } from './flights-list.model';
 import { CartService } from '../cart.service';
 import { Router } from '@angular/router';
+import { FlightDetailsService } from '../flight-details.service';
 
 @Component({
   selector: 'app-flights-list',
@@ -167,7 +168,7 @@ export class FlightsListComponent implements OnInit{
 
   filteredFlights$: Observable<Flight[]>;
 
-  constructor(private dataService: DataService, private cartService: CartService, private router: Router) {}
+  constructor(private dataService: DataService, private cartService: CartService, private router: Router, private flightDetailsService: FlightDetailsService) {}
 
   ngOnInit() {
     // { filter } === [{filths}]
@@ -186,6 +187,15 @@ export class FlightsListComponent implements OnInit{
     if (selectedFlight) {
       this.cartService.addToCart(selectedFlight);
       //this.router.navigate(['/cart']);
+    }
+  }
+
+  showFlightDetails(flightId: number) {
+    const selectedFlight = this.flights.find((flight) => flight.id === flightId);
+  
+    if (selectedFlight) {
+      this.flightDetailsService.setSelectedFlight(selectedFlight);  // Update the selected flight
+      this.router.navigate(['/flight-details', flightId]);
     }
   }
 }

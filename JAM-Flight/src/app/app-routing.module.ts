@@ -8,6 +8,7 @@ import { ContactComponent } from './contact/contact.component';
 import { BlogComponent } from './blog/blog.component';
 import { FaqComponent } from './faq/faq.component';
 import { FlightHistoryComponent } from './flight-history/flight-history.component';
+import { FlightDetailsComponent } from './flight-details/flight-details.component'; 
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'blog', component: BlogComponent},
   { path: 'faq', component: FaqComponent},
   { path: 'flight-history', component: FlightHistoryComponent},
+  { path: 'flight-details/:id', component: FlightDetailsComponent},
   { path: '',redirectTo: 'homepage', pathMatch: 'full'}
 ];
 

@@ -27,6 +27,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FaqComponent } from './faq/faq.component';
 import { BlogComponent } from './blog/blog.component';
 import { FlightHistoryComponent } from './flight-history/flight-history.component';
+import { FlightDetailsComponent } from './flight-details/flight-details.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { FlightHistoryComponent } from './flight-history/flight-history.componen
     ContactComponent,
     FaqComponent,
     BlogComponent,
-    FlightHistoryComponent
+    FlightHistoryComponent,
+    FlightDetailsComponent
   ],
   imports: [
     BrowserModule,

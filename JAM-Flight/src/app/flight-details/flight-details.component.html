@@ -1,0 +1,25 @@
+<div id="flight-details">
+    <div class="flight-details-header">
+        <h4> Flight Details</h4>
+    </div>
+    <div class="flight-details-top">
+        <div class="flightDetailsSecondPartFlightScheme">
+            <div>
+              <div class="flightDetailsSecondPartFlightSchemeUpper"><span>{{ flight.departureTime }}</span></div>
+              <div class="flightDetailsSecondPartFlightSchemeLower"><span>{{ flight.departureLocation}}</span></div>
+            </div>
+            <div>
+              <div class="flightDetailsSecondPartFlightSchemeUpper"><span> ------ <mat-icon>flight_takeoff</mat-icon> ------ </span></div>
+              <div class="flightDetailsSecondPartFlightSchemeLower"><span> {{ flight.duration }} </span></div>
+            </div>
+            <div>
+              <div class="flightDetailsSecondPartFlightSchemeUpper"><span>{{ flight.arrivalTime }}</span></div>
+              <div class="flightDetailsSecondPartFlightSchemeLower"><span>{{ flight.arrivalLocation }}</span></div>
+            </div>
+          </div>
+    </div>
+    <div class="flight-details-bottom">
+        <div class="flight-details-bottom-left">left part</div>
+        <div class="flight-details-bottom-right">right part</div>
+    </div>
+</div>
