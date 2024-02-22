@@ -1,0 +1,24 @@
+.header {
+  margin: auto;
+  max-width: 1600px;
+  position: sticky; top: 0;
+  z-index: 100;
+}
+
+/* .app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+} */
+
+.main-content {
+  flex: 1; 
+  max-width: 1600px;
+  margin: auto;
+  height: 100%;
+}
+
+.app-footer {
+flex-shrink: 0;
+
+}

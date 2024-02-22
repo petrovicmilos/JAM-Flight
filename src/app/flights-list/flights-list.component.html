@@ -1,0 +1,73 @@
+<div class="flights-list">
+  <h2>Search for flight</h2>
+  <!-- <table class="flight-table">
+        <thead>
+          <tr>
+            <th>Airline</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Duration</th>
+            <th>Distance</th>
+            <th>Class</th>
+            <th>Available Seats</th>
+            <th>Price</th>
+            <th>Rating</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let flight of (filteredFlights$ | async) || flights">
+            <td>{{ flight.airline }}</td>
+            <td>{{ flight.departureLocation }}</td>
+            <td>{{ flight.arrivalLocation }}</td>
+            <td>{{ flight.duration }}</td>
+            <td>{{ flight.distance }}</td>
+            <td>{{ flight.flightClass }}</td>
+            <td>{{ flight.availableSeats }}</td>
+            <td>{{ flight.price }}</td>
+            <td>{{ flight.rating }}</td>
+            <td><button class="add-to-cart" (click)="addToCart(flight.id)">Add to cart</button></td>
+          </tr>
+        </tbody>
+      </table> -->
+  <div class="tableOfContent">
+    <div class="flightCard" *ngFor="let flight of (filteredFlights$ | async) || flights">
+      <div class="flightCardImg"><img src="../../assets/madrid.jpg" alt=""></div>
+      <div class="flightDetails">
+        <div class="flightDetailsParts">
+          <div class="flightDetailsFirstPart">
+            <div>
+              <p class="flightDetailsFirstPartArrivalLocation">{{ flight.arrivalLocation }}</p>
+              <p class="flightDetailsFirstPartDate">{{ flight.departureDate }}</p>
+            </div>
+            <div>
+              <p class="flightDetailsFirstPartAirline">{{ flight.airline }}</p>
+              <p class="flightDetailsFirstPartflightClass">{{ flight.flightClass }} <span class="flightDetailsFirstPartPrice">{{ flight.price }}</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="flightDetailsParts">
+          <div class="flightDetailsSecondPart">
+            <div class="flightDetailsSecondPartFlightScheme">
+              <div>
+                <div class="flightDetailsSecondPartFlightSchemeUpper"><span>{{ flight.departureTime }}</span></div>
+                <div class="flightDetailsSecondPartFlightSchemeLower"><span>{{ flight.departureLocation}}</span></div>
+              </div>
+              <div>
+                <div class="flightDetailsSecondPartFlightSchemeUpper"><span> ------ <mat-icon>flight_takeoff</mat-icon> ------ </span></div>
+                <div class="flightDetailsSecondPartFlightSchemeLower"><span> {{ flight.duration }} </span></div>
+              </div>
+              <div>
+                <div class="flightDetailsSecondPartFlightSchemeUpper"><span>{{ flight.arrivalTime }}</span></div>
+                <div class="flightDetailsSecondPartFlightSchemeLower"><span>{{ flight.arrivalLocation }}</span></div>
+              </div>
+            </div>
+            <div class="flightDetailsSecondPartButtonArea">
+              <button class="flightDetailsSecondPartButton">Flight Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

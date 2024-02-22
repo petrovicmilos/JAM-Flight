@@ -1,0 +1,26 @@
+<div class="payment-form">
+    <h2>Payment Details</h2>
+    <form (ngSubmit)="confirmPayment()" #paymentForm="ngForm">
+      <!-- User Details -->
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" [(ngModel)]="paymentFormModel.firstName" required>
+      </div>
+      <!-- Repeat similar structure for other user details -->
+  
+      <!-- Card Details -->
+      <div class="form-group">
+        <label for="cardNumber">Card Number</label>
+        <input type="text" id="cardNumber" name="cardNumber" [(ngModel)]="paymentFormModel.cardNumber" required>
+      </div>
+      <!-- Repeat similar structure for card expiry and CVV -->
+  
+      <!-- Flight Information -->
+      <div class="flight-info">
+        <!-- Display flight information and total price -->
+      </div>
+  
+      <!-- Confirm Button -->
+      <button type="submit">Confirm</button>
+    </form>
+  </div>

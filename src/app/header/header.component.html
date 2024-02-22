@@ -1,0 +1,17 @@
+<div class="header">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <div class="logo"><a [routerLink]="'homepage'">JAMFlights</a></div>
+    <div class="buttons">
+        <div class="cart">
+            <a class="cart-link" href="#" [routerLink]="'cart'">
+                <span class="cart-count" *ngIf="cartItemCount > 0">{{ cartItemCount }}</span>
+                <i class="cart-icon fas fa-shopping-cart"></i> <!-- Cart icon from Font Awesome -->
+                Cart
+            </a>
+        </div>
+        <a *ngIf="!loggedInUser" class="login-button" href="#" [routerLink]="'login'">Login</a>
+        <a *ngIf="!loggedInUser" class="signup-button" href="#" [routerLink]="'signup'">Sign Up</a>
+        <a *ngIf="loggedInUser" class="signup-button" href="#" [routerLink]="'purchaseHistory'">Purchase History</a>
+        <a *ngIf="loggedInUser" (click)="signOut()" class="login-button" href="#" [routerLink]="'homepage'">Sign Out</a>
+    </div>
+</div>

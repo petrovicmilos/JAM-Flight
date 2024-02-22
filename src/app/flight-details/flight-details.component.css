@@ -1,0 +1,36 @@
+#flight-details {
+    display: flex;
+    flex-direction: column;
+    min-width: 700px;
+    margin: 5vh 0 0 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.flight-details-header {
+    text-align: left;
+}
+
+.flight-details-top {
+    width: 100%;
+    border: 1px solid #009688;
+    border-radius: 6px;
+    min-height: 100px;
+}
+
+.flight-details-bottom {
+    display: flex;
+    width: 100%;
+    min-height: 250px;
+}
+
+.flight-details-bottom-left {
+    border: 1px solid #009688;
+    border-radius: 6px; 
+    flex-grow: 1;
+}
+
+.flight-details-bottom-right {
+    border: 1px solid #009688;
+    border-radius: 6px;
+    flex-grow: 1;
+}

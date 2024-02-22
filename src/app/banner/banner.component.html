@@ -1,0 +1,28 @@
+<div class="banner">
+    <div class="banner-img">
+        <span style="color: #ffffffff">Best deals are waiting for you</span>
+    </div>
+
+</div>
+
+ <div class="search-banner">
+  <div class="search-banner-title">
+    <h3>Quick search</h3>
+  </div>
+    <div class="search-card">
+      <form class="search-form" [formGroup]="form" (ngSubmit)="filterTable()">
+          <input type="text" placeholder="Airline" formControlName="airline">
+          <input type="text" placeholder="From" formControlName="departureLocation">
+          <input type="text" placeholder="To" formControlName="arrivalLocation">
+          <input type="text" placeholder="Duration" formControlName="duration">
+          <input type="text" placeholder="Distance" formControlName="distance">
+          <input type="text" placeholder="Flight Class" formControlName="flightClass">
+          <input type="text" placeholder="Available Seats" formControlName="availableSeats">
+          <input type="text" placeholder="Price" formControlName="price">
+          <input type="number" placeholder="Rating" formControlName="rating">
+        <div>
+          <button type="submit" class="search-button">Search</button>
+        </div>
+      </form>
+    </div>
+  </div>

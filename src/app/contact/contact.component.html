@@ -1,0 +1,22 @@
+<div class="contact" data-aos="fade-up" data-aos-duration="500">
+    <div class="contact-title">
+        <h2>Contact Us</h2>
+    </div>
+        <form class="contact-form" (submit)="sendMessage()">
+            <div class="form-group">
+                <input type="text" id="name" name="name" [(ngModel)]="contactForm.name" required placeholder="Name">
+            </div>
+
+            <div class="form-group">
+                <input type="email" id="email" name="email" [(ngModel)]="contactForm.email" required placeholder="Email">
+            </div>
+
+            <div class="form-group">
+                <textarea id="message" name="message" [(ngModel)]="contactForm.message" required placeholder="Message"></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Send Message</button>
+            </div>
+        </form>
+</div>

@@ -1,0 +1,38 @@
+/* Footer styles */
+.footer {
+  background-color: #009688; /* Your desired background color */
+  color: white;
+  padding: 50px 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.footer h4 a {
+  text-decoration: none;
+  color: white;
+}
+
+/* List styles */
+.footer-right ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-transform: uppercase;
+}
+
+.footer-right li {
+  font-size: 14px;
+}
+
+.footer-right a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-right a:hover {
+  text-decoration: underline;
+}

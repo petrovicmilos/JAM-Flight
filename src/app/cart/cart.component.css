@@ -1,0 +1,77 @@
+.cart {
+    text-align: center;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse; /* Spajanje ivica ćelija za ravnanje */
+    table-layout: fixed; /* Fiksna širina ćelija za ravnanje */
+    margin-top: 10px;
+  }
+  
+  /* Stilizacija zaglavlja tabele */
+  .cart-table thead {
+    background-color: #009688;
+    color: white;
+  }
+  
+  /* Stilizacija redova u tabeli */
+  .cart-table tr {
+    border-bottom: 2px solid #ddd; /* Dodajte donju ivicu za svaki red */
+  }
+  
+  /* Stilizacija ćelija u tabeli */
+  .cart-table td, .flight-table th {
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #dddddd6e; /* Dodajte ivicu ćelijama */
+  }
+  
+  .cart-table td {
+    padding: 10px;
+  }
+
+  /* Stilizacija za svaki drugi red u telu tabele */
+  .cart-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Tamnija boja za parne redove */
+  }
+
+  .cart-table td .remove {
+    border: none;
+    border-radius: 2px;
+    background-color: #00964349;
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  .cart-total {
+    display: flex;
+    justify-content: right;
+    margin-top: 30%;
+    padding: 10px;
+    align-items: center;
+  }
+
+  .cart-total span {
+    
+  }
+
+  .cart-total button {
+    margin-left: 20px;
+    background-color: #009688;
+    height: 30px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .cart-total button:hover {
+    background-color: #02685e !important;
+  }
+  
