@@ -190,12 +190,12 @@ export class FlightsListComponent implements OnInit{
     }
   }
 
-  showFlightDetails(flightId: number) {
-    const selectedFlight = this.flights.find((flight) => flight.id === flightId);
+  showFlightDetails(arrivalLocation: string) {
+    const selectedFlight = this.flights.find((flight) => flight.arrivalLocation === arrivalLocation);
   
     if (selectedFlight) {
       this.flightDetailsService.setSelectedFlight(selectedFlight);  // Update the selected flight
-      this.router.navigate(['/flight-details', flightId]);
+      this.router.navigate(['/flight-details', arrivalLocation]);
     }
   }
 }

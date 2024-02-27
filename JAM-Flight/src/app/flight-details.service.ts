@@ -12,4 +12,9 @@ export class FlightDetailsService {
   setSelectedFlight(flight: Flight): void {
     this.selectedFlightSubject.next(flight);
   }
+  
+  getSelectedFlight(): Flight {
+    return this.selectedFlightSubject.value;
+  }
+
 }
