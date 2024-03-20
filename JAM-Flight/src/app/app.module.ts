@@ -29,7 +29,6 @@ import { BlogComponent } from './blog/blog.component';
 import { FlightDetailsComponent } from './flight-details/flight-details.component';
 import { JournalComponent } from './journal/journal.component';
 import { JournalListComponent } from './journal-list/journal-list.component';
-import { Environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -62,7 +61,6 @@ import { Environment } from '../environments/environment';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     MatSnackBarModule,
-    Environment
   ],
   providers: [DataService, UserService],
   bootstrap: [AppComponent]

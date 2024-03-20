@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-journal-list',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./journal-list.component.css']
 })
 export class JournalListComponent {
-
+  @Input() selectedTab: string;
 }

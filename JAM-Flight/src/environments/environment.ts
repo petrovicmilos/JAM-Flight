@@ -6,20 +6,14 @@ import { getAnalytics } from "firebase/analytics";
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-export const environment = { 
-firebaseConfig: {
-  apiKey: "AIzaSyAJx5zM69iEzSEeVM-dWr4UeTKNKUk2UuU",
-  authDomain: "jam-flights.firebaseapp.com",
-  projectId: "jam-flights",
-  storageBucket: "jam-flights.appspot.com",
-  messagingSenderId: "997135773111",
-  appId: "1:997135773111:web:b4250563ab57e266694c32",
-  measurementId: "G-805KCWSDD8"
-};
-
-
-// Initialize Firebase
-const app = initializeApp(environment.firebaseConfig);
-const analytics = getAnalytics(app);
-
+export const environment = {
+    firebaseConfig: {
+        apiKey: "AIzaSyAJx5zM69iEzSEeVM-dWr4UeTKNKUk2UuU",
+        authDomain: "jam-flights.firebaseapp.com",
+        projectId: "jam-flights",
+        storageBucket: "jam-flights.appspot.com",
+        messagingSenderId: "997135773111",
+        appId: "1:997135773111:web:b4250563ab57e266694c32",
+        measurementId: "G-805KCWSDD8"
+    }
 }

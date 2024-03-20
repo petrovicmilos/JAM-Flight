@@ -1,1 +1,13 @@
-<p>journal-list works!</p>
+<div>
+    <div *ngIf="selectedTab === 'pending'">
+        HTML sadržaj za Pending tab
+    </div>
+    
+    <div *ngIf="selectedTab === 'finished'">
+        HTML sadržaj za Finished tab
+    </div>
+    
+    <div *ngIf="selectedTab === 'canceled'">
+        HTML sadržaj za Canceled tab
+    </div>
+</div>

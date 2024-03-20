@@ -8,17 +8,6 @@
         <div class="journal-canceled"><a class="journal-slider-nav" (click)="selectTab('canceled')" [class.active]="selectedTab === 'canceled'">Canceled flights</a></div>
     </div>
     <div class="journal-slider-content">
-        <div *ngIf="selectedTab === 'pending'">
-            <!-- HTML za prikaz pending letova -->
-            <app-pending-flights></app-pending-flights>
-          </div>
-          <div *ngIf="selectedTab === 'finished'">
-            <!-- HTML za prikaz finished letova -->
-            <app-finished-flights></app-finished-flights>
-          </div>
-          <div *ngIf="selectedTab === 'canceled'">
-            <!-- HTML za prikaz canceled letova -->
-            <app-canceled-flights></app-canceled-flights>
-          </div>
+        <app-journal-list [selectedTab]="selectedTab"></app-journal-list>
     </div>
 </div>
