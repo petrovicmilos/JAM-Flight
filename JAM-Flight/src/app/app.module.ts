@@ -26,8 +26,10 @@ import { ContactComponent } from './contact/contact.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FaqComponent } from './faq/faq.component';
 import { BlogComponent } from './blog/blog.component';
-import { FlightHistoryComponent } from './flight-history/flight-history.component';
 import { FlightDetailsComponent } from './flight-details/flight-details.component';
+import { JournalComponent } from './journal/journal.component';
+import { JournalListComponent } from './journal-list/journal-list.component';
+import { Environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -45,8 +47,9 @@ import { FlightDetailsComponent } from './flight-details/flight-details.componen
     ContactComponent,
     FaqComponent,
     BlogComponent,
-    FlightHistoryComponent,
-    FlightDetailsComponent
+    FlightDetailsComponent,
+    JournalComponent,
+    JournalListComponent
   ],
   imports: [
     BrowserModule,
@@ -59,6 +62,7 @@ import { FlightDetailsComponent } from './flight-details/flight-details.componen
     BrowserAnimationsModule,
     ReactiveFormsModule,
     MatSnackBarModule,
+    Environment
   ],
   providers: [DataService, UserService],
   bootstrap: [AppComponent]

@@ -1,0 +1,24 @@
+<div id="journal"> 
+    <div class="journal-title">
+        <h2>Flight Journal</h2>
+    </div>
+    <div class="journal-slider">
+        <div class="journal-pending"><a class="journal-slider-nav" (click)="selectTab('pending')" [class.active]="selectedTab === 'pending'">Pending flights</a></div>
+        <div class="journal-finished"><a class="journal-slider-nav" (click)="selectTab('finished')" [class.active]="selectedTab === 'finished'">Finished flights</a></div>
+        <div class="journal-canceled"><a class="journal-slider-nav" (click)="selectTab('canceled')" [class.active]="selectedTab === 'canceled'">Canceled flights</a></div>
+    </div>
+    <div class="journal-slider-content">
+        <div *ngIf="selectedTab === 'pending'">
+            <!-- HTML za prikaz pending letova -->
+            <app-pending-flights></app-pending-flights>
+          </div>
+          <div *ngIf="selectedTab === 'finished'">
+            <!-- HTML za prikaz finished letova -->
+            <app-finished-flights></app-finished-flights>
+          </div>
+          <div *ngIf="selectedTab === 'canceled'">
+            <!-- HTML za prikaz canceled letova -->
+            <app-canceled-flights></app-canceled-flights>
+          </div>
+    </div>
+</div>
