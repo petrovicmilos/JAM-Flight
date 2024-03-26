@@ -1,13 +1,13 @@
 <div>
     <div *ngIf="selectedTab === 'pending'">
-        HTML sadržaj za Pending tab
+        <app-pending-flights></app-pending-flights>
     </div>
     
     <div *ngIf="selectedTab === 'finished'">
-        HTML sadržaj za Finished tab
+        <app-finished-flights></app-finished-flights>
     </div>
     
     <div *ngIf="selectedTab === 'canceled'">
-        HTML sadržaj za Canceled tab
+        <app-canceled-flights></app-canceled-flights>
     </div>
 </div>

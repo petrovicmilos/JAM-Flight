@@ -21,6 +21,10 @@
     margin-top: 30px;
 }
 
+.journal-slider-content {
+  margin-top: 50px;
+}
+
 .journal-slider-nav {
     text-decoration: none;
     font-size: 16px;
@@ -48,15 +52,3 @@
       width: 100%;
     }
   }
-
-.journal-pending {
-    
-}
-
-.journal-finished {
-
-}
-
-.journal-canceled {
-
-}

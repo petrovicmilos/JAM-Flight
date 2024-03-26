@@ -29,6 +29,9 @@ import { BlogComponent } from './blog/blog.component';
 import { FlightDetailsComponent } from './flight-details/flight-details.component';
 import { JournalComponent } from './journal/journal.component';
 import { JournalListComponent } from './journal-list/journal-list.component';
+import { FinishedFlightsComponent } from './finished-flights/finished-flights.component';
+import { PendingFlightsComponent } from './pending-flights/pending-flights.component';
+import { CanceledFlightsComponent } from './canceled-flights/canceled-flights.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +51,10 @@ import { JournalListComponent } from './journal-list/journal-list.component';
     BlogComponent,
     FlightDetailsComponent,
     JournalComponent,
-    JournalListComponent
+    JournalListComponent,
+    FinishedFlightsComponent,
+    PendingFlightsComponent,
+    CanceledFlightsComponent
   ],
   imports: [
     BrowserModule,
