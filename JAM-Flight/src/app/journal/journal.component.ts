@@ -10,6 +10,7 @@ export class JournalComponent {
 
   selectTab(tab: string) {
     this.selectedTab = tab;
-    console.log("clicked");
   }
+
+  
 }

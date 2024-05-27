@@ -1,16 +1,16 @@
-.flights-list {
-    text-align: center;
-    margin-top: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+#pending-flights {
+  text-align: center;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .tableOfContent {
-    width: 70%;
-    margin-top: 10px;
-  }
+  width: 120%;
+  margin-top: 10px;
+}
 
 .flightCard {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -21,9 +21,11 @@
   display: flex;
 }
 
+
 .flightCardImg {
   flex-grow: 1.5;
 }
+
 
 .flightCard img {
   width: 100%;
@@ -59,7 +61,7 @@
 .flightDetailsFirstPartArrivalLocation {
   font-weight: 600;
   font-size: 30px;
-  margin: 0 0 0 10px;
+  /* margin: 0 0 0 10px; */
   text-align: left;
 }
 
@@ -74,12 +76,12 @@
 
 .flightDetailsFirstPartDate {
   font-size: 20px;
-  margin: 20px 0 0 20px;
+  margin: 20px 0 0 0;
   text-align: left;
 }
 
 .flightDetailsFirstPartflightClass {
-  margin: 5px 0 0 0;
+  margin: 5px 0 0 5px;
   font-size: 15px;
 }
 
@@ -92,6 +94,7 @@
 /* FIRST PART ENDS HERE */
 
 /* SECOND PART STARTS HERE */
+
 .flightDetailsSecondPart {
   display: flex;
   flex-grow: 1;
@@ -104,6 +107,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  margin-left: -10px;
 }
 
 .flightDetailsSecondPartFlightSchemeUpper {
