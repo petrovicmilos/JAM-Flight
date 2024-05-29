@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -32,6 +30,7 @@ import { JournalListComponent } from './journal-list/journal-list.component';
 import { FinishedFlightsComponent } from './finished-flights/finished-flights.component';
 import { PendingFlightsComponent } from './pending-flights/pending-flights.component';
 import { CanceledFlightsComponent } from './canceled-flights/canceled-flights.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -57,6 +56,7 @@ import { CanceledFlightsComponent } from './canceled-flights/canceled-flights.co
     CanceledFlightsComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
@@ -67,6 +67,10 @@ import { CanceledFlightsComponent } from './canceled-flights/canceled-flights.co
     BrowserAnimationsModule,
     ReactiveFormsModule,
     MatSnackBarModule,
+
+  ],
+  exports: [
+    FinishedFlightsComponent
   ],
   providers: [DataService, UserService],
   bootstrap: [AppComponent]

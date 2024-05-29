@@ -1,0 +1,9 @@
+#finished-flights {
+    display: grid;
+    
+}
+
+.finished-flights-card {
+    display: flex;
+    flex-direction: column;
+}
