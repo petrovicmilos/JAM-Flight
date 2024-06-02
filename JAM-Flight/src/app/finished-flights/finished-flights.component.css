@@ -1,9 +1,19 @@
 #finished-flights {
     display: grid;
-    
 }
 
 .finished-flights-card {
     display: flex;
     flex-direction: column;
+    
+}
+
+.finished-flights-card-img {
+    width: 100%;
+    height: 80px;
+}
+
+.finished-flights-card-img img {
+    width: 100%;
+    height: 100%;
 }

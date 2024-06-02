@@ -23,6 +23,7 @@
 
 .journal-slider-content {
   margin-top: 30px;
+  display: grid;
 }
 
 .journal-slider-nav {

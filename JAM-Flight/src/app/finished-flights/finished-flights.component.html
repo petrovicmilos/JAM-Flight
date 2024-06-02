@@ -1,8 +1,15 @@
-<div class="finished-flights" *ngIf="flights?.length">
+<div id="finished-flights" *ngIf="flights?.length">
     <div class="finished-flights-card" *ngFor="let flight of flights">
-        <div class="finished-flights-card-img">{{ flight.airline }}</div>
+        <div class="finished-flights-card-img"><img src="../../assets/madrid.jpg" alt=""></div>
         <div class="finished-flights-card-content">
-            <div></div>
+            <div class="finished-flights-card-content-airline">{{ flight.airline }}</div>
+            <div class="finished-flights-card-content-fromTo">
+                <span>{{ flight.departureLocation }}</span>
+                <span> ------ <mat-icon>flight_takeoff</mat-icon> ------ </span>
+                <span>{{ flight.arrivalLocation }}</span>
+            </div>
+            <div class="finished-flights-card-content-date">{{ flight.departureDate }}</div>
+            <div class="finished-flights-card-content-status">Finished</div>
         </div>
     </div>
-  </div>
+</div>
