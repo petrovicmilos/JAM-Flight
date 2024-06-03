@@ -1,0 +1,107 @@
+<div class="header-buttons">
+    <button mat-button [mat-dialog-close]="true" class="close-button"><mat-icon>close</mat-icon></button>
+
+    <span class="header-title">User Profile</span>
+
+    <button mat-icon-button (click)="doEdit()" *ngIf="this.profileForInput.id == this.userService.currentUser.id">
+        <mat-icon>edit</mat-icon>
+    </button>
+</div>
+<br>
+
+<mat-dialog-content>
+    <form fxLayout="column" fxLayoutGap="2vh" #editForm="ngForm" (ngSubmit)="finishEditing(editForm)">
+        <!-- name -->
+        <mat-card>
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayout="1vw">
+                <mat-icon>person</mat-icon>
+                <div fxLayoutAlign="column" *ngIf="!this.isEditing">
+                    <span>{{ this.profileForInput.name }}</span>
+                </div>
+                <mat-form-field *ngIf="this.isEditing">
+                    <input matInput type="text" placeholder="Your name and surname" ngModel name="name"
+                        [(ngModel)]="this.profileForInput.name" required #nameInput="ngModel">
+                    <mat-error *ngIf="nameInput.hasError('required')">You must enter your name and surname</mat-error>
+                </mat-form-field>
+            </div>
+        </mat-card>
+
+        <!-- email -->
+        <mat-card>
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayout="1vw">
+                <mat-icon>email</mat-icon>
+                <div fxLayoutAlign="column" *ngIf="!this.isEditing">
+                    <span>{{ this.profileForInput.email }}</span>
+                </div>
+                <mat-form-field *ngIf="this.isEditing">
+                    <input matInput type="email" placeholder="Your email" ngModel name="email"
+                        [(ngModel)]="this.profileForInput.email" email required #emailInput="ngModel">
+                    <mat-error *ngIf="emailInput.hasError('required')">Email is required</mat-error>
+                    <mat-error *ngIf="!emailInput.hasError('required')">Email is not in correct format</mat-error>
+                </mat-form-field>
+            </div>
+        </mat-card>
+
+        <!-- password -->
+        <mat-card *ngIf="this.isEditing">
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayout="1vw">
+                <mat-icon>lock</mat-icon>
+                <mat-form-field hintLabel="Password must be at least 6 characters">
+                    <input matInput type="password" placeholder="Your password" ngModel name="password"
+                        minlength="6" [(ngModel)]="this.profileForInput.password" password required
+                        #passwordInput="ngModel">
+                    <mat-hint align="end">{{ passwordInput.value?.length }} / 6</mat-hint>
+                </mat-form-field>
+            </div>
+        </mat-card>
+
+        <!-- date -->
+        <mat-card>
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayout="1vw">
+                <mat-icon>calendar_today</mat-icon>
+                <div fxLayoutAlign="column" *ngIf="!this.isEditing">
+                    <span>{{ this.profileForInput.date }}</span>
+                </div>
+                <mat-form-field *ngIf="this.isEditing">
+                    <input matInput placeholder="Your Date of Birth" [matDatepicker]="picker" ngModel name="date"
+                        [(ngModel)]="this.profileForInput.date" required #dateInput="ngModel">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                    <mat-error *ngIf="dateInput.hasError('required')">Date of birth is required</mat-error>
+                </mat-form-field>
+            </div>
+        </mat-card>
+
+        <!-- phone -->
+        <mat-card>
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayout="1vw">
+                <mat-icon>call</mat-icon>
+                <div fxLayoutAlign="column" *ngIf="!this.isEditing">
+                    <span>{{ this.profileForInput.phone }}</span>
+                </div>
+                <mat-form-field *ngIf="this.isEditing">
+                    <input matInput type="text" placeholder="Your phone number" ngModel name="phone"
+                        [(ngModel)]="this.profileForInput.phone" required #phoneInput="ngModel">
+                    <mat-error *ngIf="phoneInput.hasError('required')">Phone number is required</mat-error>
+                </mat-form-field>
+            </div>
+        </mat-card>
+
+        <!-- address -->
+        <mat-card>
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayout="1vw">
+                <mat-icon>house</mat-icon>
+                <div fxLayoutAlign="column" *ngIf="!this.isEditing">
+                    <span>{{ this.profileForInput.address }}</span>
+                </div>
+                <mat-form-field *ngIf="this.isEditing">
+                    <input matInput type="text" placeholder="Your address" ngModel name="address"
+                        [(ngModel)]="this.profileForInput.address" required #addressInput="ngModel">
+                    <mat-error *ngIf="addressInput.hasError('required')">Address is required</mat-error>
+                </mat-form-field>
+            </div>
+        </mat-card>
+
+        <button *ngIf="this.isEditing" [disabled]="!editForm.valid" mat-raised-button type="submit" color="primary">Save</button>
+    </form>
+</mat-dialog-content>

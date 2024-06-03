@@ -159,7 +159,6 @@ export class DataService {
       rating: 4.8
     }
   ];
-  
   private filterCriteriaSubject = new BehaviorSubject<Flight>(null);
   filterCriteria$ = this.filterCriteriaSubject.asObservable();
 
@@ -170,7 +169,7 @@ export class DataService {
     return this.filterCriteria$.pipe(
       map((filterCriteria: Flight) => {
         return data.filter((row: Flight) => {
-          return Object.keys(filterCriteria).every(key => {
+          return Object?.keys(filterCriteria).every(key => {
             const value = row[key]?.toString().toLowerCase();
             const filterValue = filterCriteria[key]?.toString().toLowerCase();
             if (!filterValue) return true; // Keep the row if there is no filter value
@@ -179,5 +178,16 @@ export class DataService {
         });
       })
     );
+  }
+
+  //private loggedInSubject : BehaviorSubject<boolean>;
+  private loggedInSubject = new BehaviorSubject<boolean>(false);
+  loggedInSubject$ = this.loggedInSubject.asObservable();
+  public setLoggedInSubject(){
+    //this.loggedInSubject.next(!this.loggedInSubject.value);
+    this.loggedInSubject.next(true);
+  }
+  public getLoggedInSubject(){
+    return this.loggedInSubject.value;
   }
 }

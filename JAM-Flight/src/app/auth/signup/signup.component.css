@@ -13,8 +13,8 @@
     opacity: 0.8;
     text-align: center;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    width: 450px;
-    height: 500px;
+    min-width: 450px;
+    /*height: 500px;*/
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -35,7 +35,7 @@
     outline: none;
     margin-bottom: 10px;
   }
-  
+
   /* Style for the login button */
   .signup-button {
     background-color: #009688;

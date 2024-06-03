@@ -13,13 +13,13 @@ import { FlightDetailsService } from '../flight-details.service';
 })
 export class FlightsListComponent implements OnInit{
   
-
+  flights = this.dataService.flights;
 
   filteredFlights$: Observable<Flight[]>;
 
   constructor(private dataService: DataService, private cartService: CartService, private router: Router, private flightDetailsService: FlightDetailsService) {}
 
-  ngOnInit() {
+  ngOnInit():void {
     // { filter } === [{filths}]
     // this.filteredFlights$ = this.dataService.getFilteredData(this.flights);
 
