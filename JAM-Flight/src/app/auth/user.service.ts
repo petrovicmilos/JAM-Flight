@@ -5,9 +5,9 @@ export interface User {
     name: string;
     email: string;
     password: string;
-    //date: Date;
     phone: string;
-    //address: string;
+    address: string;
+    date: Date;
 }
 
 
@@ -23,9 +23,9 @@ export class UserService {
             name: "Guest",
             email: "gues@mail.com",
             password: "guest123",
-            //date: new Date("2020-12-30 12:09"),
-            phone: "0600000000",
-            //address: "guest 1"
+            phone: "+381600000000",
+            address: "guest 1",
+            date: new Date("1999-12-30 12:09")
         },
         
         {
@@ -33,10 +33,9 @@ export class UserService {
             name: "Adam Zlatkovic",
             email: "qwe@qwe.com",
             password: "qweqwe",
-            phone: "0603333333"
-            /*date: new Date("1999-5-1 12:09"),
-            ,
-            address: "Koledarska 1"*/
+            phone: "+381603333333",
+            address: "Koledarska 1",
+            date: new Date("1999-5-1 12:09")
         },
 
         {
@@ -44,10 +43,9 @@ export class UserService {
             name: "Jovan Jacov",
             email: "ne@mail.com",
             password: "sifra123",
-            phone: "0603555333"
-            /*date: new Date("1999-9-20 12:00"),
-            ,
-            address: "Ravan 53"*/
+            phone: "+381603555333",
+            address: "Ravan 53",
+            date: new Date("1999-9-20 12:00")
         },
 
         {
@@ -55,10 +53,9 @@ export class UserService {
             name: "John Johnson",
             email: "johny@mail.com",
             password: "password123",
-            phone: "0603321333"
-            /*date: new Date("1985-9-20 12:00"),
-            ,
-            address: "Cold Street 67"*/
+            phone: "+381603321333",
+            address: "Cold Street 67",
+            date: new Date("1985-9-20 12:00")
         },
 
         {
@@ -66,10 +63,9 @@ export class UserService {
             name: "John Snow",
             email: "winteriscoming@mail.com",
             password: "muhqueen",
-            phone: "0604455333"
-            /*date: new Date("1992-9-20 12:00"),
-            ,
-            address: "Castle Black 1"*/
+            phone: "+381604455333",
+            address: "Castle Black 1",
+            date: new Date("1992-9-20 12:00")
         },
 
         {
@@ -77,10 +73,9 @@ export class UserService {
             name: "Walter White",
             email: "heisenberg@mail.com",
             password: "babyblue",
-            phone: "0604455123"
-            /*date: new Date("1970-9-20 12:00"),
-            ,
-            address: "308 Negra Arroyo Lane"*/
+            phone: "+381604455123",
+            address: "308 Negra Arroyo Lane",
+            date: new Date("1970-9-20 12:00")
         },
 
         {
@@ -88,10 +83,9 @@ export class UserService {
             name: "John Wick",
             email: "john.wick@mail.com",
             password: "babayaga",
-            phone: "0604453923"
-            /*date: new Date("1983-9-20 12:00"),
-            ,
-            address: "12 St. John"*/
+            phone: "+381604453923",
+            address: "12 St. John",
+            date: new Date("1983-9-20 12:00")
         },
         
         {
@@ -99,10 +93,9 @@ export class UserService {
             name: "Jules Winnfield",
             email: "jules32@mail.com",
             password: "ezekiel2517",
-            phone: "0614455123"
-            /*date: new Date("1977-9-20 12:00"),
-            ,
-            address: "296 Berrow Road"*/
+            phone: "+381614455123",
+            address: "296 Berrow Road",
+            date: new Date("1977-9-20 12:00")
         }
 
     ];
@@ -117,7 +110,18 @@ export class UserService {
         return this.currentUser;
     }
 
-    registerUser(name: string, email: string, password: string, phone: string) : User {
+    getUserById(id: number): User {
+        var foundUser: User;
+        UserService.dummyUserList.forEach(user => {
+            if(user.id == id){
+                foundUser = user;
+            }
+        });
+        this.currentUser = foundUser!;
+        return foundUser!;
+    }
+
+    registerUser(name: string, email: string, password: string, phone: string, address: string, date: Date) : User {
         var maxId: number = 0;
         UserService.dummyUserList.forEach(user => {
             if(maxId < user.id) {
@@ -127,7 +131,7 @@ export class UserService {
 
         var id = ++maxId;
 
-        var user: User = {id, name, email, password, phone};
+        var user: User = {id, name, email, password, phone, address, date};
 
         UserService.dummyUserList.push(user);
 

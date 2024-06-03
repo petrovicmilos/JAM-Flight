@@ -1,0 +1,106 @@
+/* form-example.component.css */
+
+/* Container styling */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1em;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  mat-card {
+    margin-bottom: 1em;
+    padding: 1em;
+  }
+  
+  mat-card div {
+    display: flex;
+    align-items: center;
+  }
+  
+  mat-card mat-icon {
+    margin-right: 10px;
+    color: #555;
+  }
+  
+  /* Form field styling */
+  mat-form-field {
+    width: 100%;
+  }
+  
+  mat-form-field input {
+    padding: 0.5em;
+    font-size: 1em;
+  }
+  
+  mat-form-field::ng-deep .mat-form-field-underline {
+    background-color: #4CAF50;
+  }
+  
+  mat-form-field::ng-deep .mat-form-field-ripple {
+    background-color: #81C784;
+  }
+  
+  mat-form-field::ng-deep .mat-form-field-subscript-wrapper .mat-error {
+    color: #f44336;
+  }
+  
+  mat-form-field::ng-deep .mat-form-field-subscript-wrapper .mat-hint {
+    color: #888;
+  }
+  
+  /* Button styling */
+  button[mat-button], button[mat-raised-button] {
+    margin-top: 1em;
+    color: #fff;
+    background-color: #009688;
+  }
+  
+  button[mat-button]:hover, button[mat-raised-button]:hover {
+    background-color: #02685e;
+  }
+  
+  button[mat-button]:disabled, button[mat-raised-button]:disabled {
+    background-color: #BDBDBD;
+    cursor: not-allowed;
+  }
+  
+  /* Custom classes for disabled state */
+  button.disabled {
+    background-color: #BDBDBD;
+    cursor: not-allowed;
+  }
+  
+  /* Align buttons and title in the header */
+  .header-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header-buttons button {
+    margin: 0;
+    margin-left: 5px;
+  }
+  
+  .header-title {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .close-button {
+    width: auto;
+    text-align: center;
+    min-width: auto;
+    padding: 8px;
+  }
+
+  .close-button mat-icon {
+    margin-right: 0;
+  }
+  

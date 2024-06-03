@@ -27,7 +27,7 @@
 }
 
 /* Style for button links */
-.login-button, .signup-button {
+.login-button, .signup-button, .profile-button{
   margin-left: 10px;
   padding: 10px 15px;
   border-radius: 5px;
@@ -80,4 +80,9 @@
   width: 20px;
   background-color: #009688;
   text-align: center;
+}
+
+.profile-button {
+  background-color: #fff; /* White background */
+  color: #000; /* Black text */
 }

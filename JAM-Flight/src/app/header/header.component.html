@@ -11,6 +11,7 @@
         </div>
         <a *ngIf="!loggedInUser" class="login-button" href="#" [routerLink]="'login'">Login</a>
         <a *ngIf="!loggedInUser" class="signup-button" href="#" [routerLink]="'signup'">Sign Up</a>
+        <button *ngIf="loggedInUser" mat-raised-button color="primary" (click)="openProfile(this.userService.currentUser.id)">{{ this.userService.currentUser.email }}</button>
         <a *ngIf="loggedInUser" (click)="signOut()" class="signup-button" href="#" [routerLink]="'homepage'">Sign Out</a>
     </div>
 </div>
