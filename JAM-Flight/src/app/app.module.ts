@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
@@ -28,6 +26,13 @@ import { ContactComponent } from './contact/contact.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FaqComponent } from './faq/faq.component';
 import { BlogComponent } from './blog/blog.component';
+import { FlightDetailsComponent } from './flight-details/flight-details.component';
+import { JournalComponent } from './journal/journal.component';
+import { JournalListComponent } from './journal-list/journal-list.component';
+import { FinishedFlightsComponent } from './finished-flights/finished-flights.component';
+import { PendingFlightsComponent } from './pending-flights/pending-flights.component';
+import { CanceledFlightsComponent } from './canceled-flights/canceled-flights.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -46,8 +51,15 @@ import { BlogComponent } from './blog/blog.component';
     ContactComponent,
     FaqComponent,
     BlogComponent,
+    FlightDetailsComponent,
+    JournalComponent,
+    JournalListComponent,
+    FinishedFlightsComponent,
+    PendingFlightsComponent,
+    CanceledFlightsComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
@@ -59,6 +71,10 @@ import { BlogComponent } from './blog/blog.component';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     MatSnackBarModule,
+
+  ],
+  exports: [
+    FinishedFlightsComponent
   ],
   providers: [DataService, UserService],
   bootstrap: [AppComponent]

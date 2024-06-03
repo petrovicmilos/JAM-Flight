@@ -1,0 +1,117 @@
+#flight-details-mainDIV {}
+
+#flight-details {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    margin: 5vh auto;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding: 3%;
+    min-height: 50vh;
+}
+
+.flight-details-header {
+    text-align: left;
+}
+
+.flight-details-top {
+    width: 100%;
+    border: 1px solid #009688;
+    border-radius: 6px;
+    min-height: 100px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.flightDetailsSecondPartFlightScheme {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.flightDetailsSecondPartFlightSchemeUpper {
+    font-size: 35px;
+    padding: 10px;
+}
+
+.flightDetailsSecondPartFlightSchemeLower {
+    text-align: center;
+}
+
+.flight-details-bottom {
+    display: flex;
+    width: 100%;
+    min-height: 250px;
+    justify-content: space-between;
+}
+
+.flight-details-bottom-left {
+    border: 1px solid #009688;
+    border-radius: 6px;
+    width: 45%;
+    padding-left: 15px;
+}
+
+.flight-details-bottom-right {
+    border: 1px solid #009688;
+    border-radius: 6px;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flight-details-bottom-left-flightClass {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+}
+
+.flight-details-bottom-left-flightClass-header {
+    font-weight: 700;
+    font-size: 21px;
+    margin-bottom: 0;
+}
+
+.flight-details-bottom-left-header {
+    margin-bottom: 0;
+}
+
+.flight-details-bottom-left-text {
+    font-weight: 400;
+    font-size: 13px;
+    color: #898989ff;
+}
+
+.flight-details-bottom-right-header {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.flight-details-bottom-right-img img {
+    width: 200px;
+    height: 100%;
+    margin-bottom: 0;
+}
+
+.buttonDIV {
+    display: flex;
+    justify-content: right;
+    margin-top: 30px;
+}
+
+.buttonDIV button {
+    color: white;
+    background-color: #009688;
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+    width: 100px;
+    height: 45px;
+    padding: 0 8px 0 8px;
+    cursor: pointer;
+}

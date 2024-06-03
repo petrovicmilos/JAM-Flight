@@ -1,0 +1,85 @@
+<div id="pending-flights">
+  <div class="tableOfContent">
+    <div class="flightCard">
+      <div class="flightCardImg"><img src="../../assets/madrid.jpg" alt=""></div>
+      <div class="flightDetails">
+        <div class="flightDetailsParts">
+          <div class="flightDetailsFirstPart">
+            <div>
+              <p class="flightDetailsFirstPartArrivalLocation">Barcelona</p>
+              <p class="flightDetailsFirstPartDate">2024-02-16</p>
+            </div>
+            <div>
+              <p class="flightDetailsFirstPartAirline">Air Serbia</p>
+              <p class="flightDetailsFirstPartflightClass">Economy   <span class="flightDetailsFirstPartPrice">150$</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="flightDetailsParts">
+          <div class="flightDetailsSecondPart">
+            <div class="flightDetailsSecondPartFlightScheme">
+              <div>
+                <div class="flightDetailsSecondPartFlightSchemeUpper"><span>10:00</span></div>
+                <div class="flightDetailsSecondPartFlightSchemeLower"><span>Belgrade</span></div>
+              </div>
+              <div>
+                <div class="flightDetailsSecondPartFlightSchemeUpper"><span> ------ <mat-icon>flight_takeoff</mat-icon>
+                    ------ </span></div>
+                <div class="flightDetailsSecondPartFlightSchemeLower"><span>2 hours</span></div>
+              </div>
+              <div>
+                <div class="flightDetailsSecondPartFlightSchemeUpper"><span>12:00</span></div>
+                <div class="flightDetailsSecondPartFlightSchemeLower"><span>Barcelona</span></div>
+              </div>
+            </div>
+            <div class="flightDetailsSecondPartButtonArea">
+              <button class="flightDetailsSecondPartButton">Flight Details</button>
+              <button class="flightDetailsSecondPartCancelButton">Cancel Flight</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngFor="let flight of pendingFlights" class="flightCard">
+      <div class="flightCardImg"><img src="../../assets/madrid.jpg" alt=""></div>
+      <div class="flightDetails">
+        <div class="flightDetailsParts">
+          <div class="flightDetailsFirstPart">
+            <div>
+              <p class="flightDetailsFirstPartArrivalLocation">{{ flight.arrivalLocation }}</p>
+              <p class="flightDetailsFirstPartDate">{{ flight.departureDate }}</p>
+            </div>
+            <div>
+              <p class="flightDetailsFirstPartAirline">{{ flight.airline }}</p>
+              <p class="flightDetailsFirstPartflightClass">{{ flight.flightClass }} <span
+                  class="flightDetailsFirstPartPrice">{{ flight.price }}</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="flightDetailsParts">
+          <div class="flightDetailsSecondPart">
+            <div class="flightDetailsSecondPartFlightScheme">
+              <div>
+                <div class="flightDetailsSecondPartFlightSchemeUpper"><span>{{ flight.departureTime }}</span></div>
+                <div class="flightDetailsSecondPartFlightSchemeLower"><span>{{ flight.departureLocation }}</span></div>
+              </div>
+              <div>
+                <div class="flightDetailsSecondPartFlightSchemeUpper"><span> ------ <mat-icon>flight_takeoff</mat-icon>
+                    ------ </span></div>
+                <div class="flightDetailsSecondPartFlightSchemeLower"><span>{{ flight.duration }}</span></div>
+              </div>
+              <div>
+                <div class="flightDetailsSecondPartFlightSchemeUpper"><span>{{ flight.arrivalTime }}</span></div>
+                <div class="flightDetailsSecondPartFlightSchemeLower"><span>{{ flight.arrivalLocation }}</span></div>
+              </div>
+            </div>
+            <div class="flightDetailsSecondPartButtonArea">
+              <button class="flightDetailsSecondPartButton">Flight Details</button>
+              <button class="flightDetailsSecondPartCancelButton">Cancel Flight</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

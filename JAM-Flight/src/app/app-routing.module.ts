@@ -8,6 +8,9 @@ import { CartComponent } from './cart/cart.component';
 import { ContactComponent } from './contact/contact.component';
 import { BlogComponent } from './blog/blog.component';
 import { FaqComponent } from './faq/faq.component';
+import { FlightDetailsComponent } from './flight-details/flight-details.component'; 
+import { FlightDetailsGuard } from './flight-details.guard';
+import { JournalComponent } from './journal/journal.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -18,6 +21,8 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent},
   { path: 'blog', component: BlogComponent},
   { path: 'faq', component: FaqComponent},
+  { path: 'flight-details/:arrivalLocation', component: FlightDetailsComponent, canActivate: [FlightDetailsGuard],},
+  { path: 'journal', component: JournalComponent},
   { path: '',redirectTo: 'homepage', pathMatch: 'full'}
 ];
 

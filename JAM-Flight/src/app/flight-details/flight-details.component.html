@@ -1,0 +1,51 @@
+<div id="flight-details-mainDIV">
+<div id="flight-details">
+    <div class="flight-details-header">
+        <h4> Flight Details</h4>
+    </div>
+    <div class="flight-details-top">
+        <div class="flightDetailsSecondPartFlightScheme">
+            <div>
+              <div class="flightDetailsSecondPartFlightSchemeUpper"><span>{{ flight.departureTime }}</span></div>
+              <div class="flightDetailsSecondPartFlightSchemeLower"><span>{{ flight.departureLocation}}</span></div>
+            </div>
+            <div>
+              <div class="flightDetailsSecondPartFlightSchemeUpper"><span> ------ <mat-icon>flight_takeoff</mat-icon> ------ </span></div>
+              <div class="flightDetailsSecondPartFlightSchemeLower"><span> {{ flight.duration }} </span></div>
+            </div>
+            <div>
+              <div class="flightDetailsSecondPartFlightSchemeUpper"><span>{{ flight.arrivalTime }}</span></div>
+              <div class="flightDetailsSecondPartFlightSchemeLower"><span>{{ flight.arrivalLocation }}</span></div>
+            </div>
+          </div>
+    </div>
+    <div class="flight-details-bottom">
+        <div class="flight-details-bottom-left">
+          <div class="flight-details-bottom-left-flightClass">
+            <p class="flight-details-bottom-left-flightClass-header"> {{ flight.flightClass }} </p>
+            <p class="flight-details-bottom-left-text">Cabin: {{ flight.flightClass }} +</p>
+          </div>
+          <div>
+            <p class="flight-details-bottom-left-header">Seat</p>
+            <p class="flight-details-bottom-left-text">Seat Choice Included</p>
+          </div>
+          <div>
+            <p class="flight-details-bottom-left-header">Bag</p>
+            <p class="flight-details-bottom-left-text" style="margin-bottom: 0;">1 Cabin Baggage</p>
+            <p class="flight-details-bottom-left-text">1 Checked Baggage</p>
+          </div>
+          <div>
+            <p class="flight-details-bottom-left-header">Flexibility</p>
+            <p class="flight-details-bottom-left-text">Non-refundable</p>
+          </div>
+        </div>
+        <div class="flight-details-bottom-right">
+          <div class="flight-details-bottom-right-header">No Added Services</div>
+          <div class="flight-details-bottom-right-img"><img src="../../assets/flight-details-plane.png" alt="flight-details-plane"></div>
+        </div>
+    </div>
+    <div class="buttonDIV">
+      <button (click)="addToCart()">Add to Cart</button>
+    </div>
+</div>
+</div>

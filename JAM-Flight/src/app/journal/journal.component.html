@@ -1,0 +1,13 @@
+<div id="journal"> 
+    <div class="journal-title">
+        <h2>Flight Journal</h2>
+    </div>
+    <div class="journal-slider">
+        <div class="journal-pending"><a class="journal-slider-nav" (click)="selectTab('pending')" [class.active]="selectedTab === 'pending'">Pending flights</a></div>
+        <div class="journal-finished"><a class="journal-slider-nav" (click)="selectTab('finished')" [class.active]="selectedTab === 'finished'">Finished flights</a></div>
+        <div class="journal-canceled"><a class="journal-slider-nav" (click)="selectTab('canceled')" [class.active]="selectedTab === 'canceled'">Canceled flights</a></div>
+    </div>
+    <div class="journal-slider-content">
+        <app-journal-list [selectedTab]="selectedTab"></app-journal-list>
+    </div>
+</div>
