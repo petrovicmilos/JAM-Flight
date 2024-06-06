@@ -31,4 +31,8 @@ export class CartComponent implements OnInit {
       this.cartTotalPrice = total;
     });
   }
+
+  proceedToPayment() {
+    this.cartService.confirmPayment();
+  }
 }

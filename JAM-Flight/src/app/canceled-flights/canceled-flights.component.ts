@@ -1,5 +1,8 @@
 import { Component, OnInit} from '@angular/core';
 import { DataService } from '../data.service';
+import { CartService } from '../cart.service';
+import { Flight } from '../flights-list/flights-list.model';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-canceled-flights',
@@ -7,12 +10,11 @@ import { DataService } from '../data.service';
   styleUrls: ['./canceled-flights.component.css']
 })
 export class CanceledFlightsComponent implements OnInit {
-  flights = this.dataService.flights;
-  
-  constructor(private dataService: DataService) {}
+  canceledFlights$: Observable<Flight[]>;
 
-  ngOnInit():void { 
-    
-    console.log(this.flights);
+  constructor(private cartService: CartService) {}
+
+  ngOnInit(): void {
+    this.canceledFlights$ = this.cartService.canceledFlights$;
   }
 }

@@ -17,4 +17,8 @@ export class PendingFlightsComponent implements OnInit {
       this.pendingFlights = flights;
     });
   }
+
+  cancelFlight(flight: Flight) {
+    this.cartService.cancelFlight(flight);
+  }
 }

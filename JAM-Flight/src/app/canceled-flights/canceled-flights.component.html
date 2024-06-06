@@ -13,4 +13,18 @@
             <div class="finished-flights-card-content-status">Canceled</div>
         </div>
     </div>
+    <div class="finished-flights-card" *ngFor="let flight of canceledFlights$ | async">
+        <div class="finished-flights-card-img"><img src="../../assets/aerial-shot-beautiful-city-riga-latvia-winter.jpg" alt=""></div>
+        <div class="finished-flights-card-content">
+            <div class="finished-flights-card-content-airline">{{ flight.airline }}</div>
+            <div class="finished-flights-card-content-fromTo">
+                <span>{{ flight.departureLocation }}</span>
+                <span> ------ <mat-icon>flight_takeoff</mat-icon> ------ </span>
+                <span>{{ flight.arrivalLocation }}</span>
+            </div>
+            <div class="finished-flights-card-content-date">{{ flight.departureDate }}</div> 
+            <hr>   
+            <div class="finished-flights-card-content-status">Canceled</div>
+        </div>
+    </div>
 </div>
