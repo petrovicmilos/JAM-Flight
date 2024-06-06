@@ -10,7 +10,11 @@
             </div>
             <div class="finished-flights-card-content-date">{{ flight.departureDate }}</div> 
             <hr>   
-            <div class="finished-flights-card-content-status">Finished</div>
+            <div class="finished-flights-card-content-status">
+                <span>Finished</span>
+                <div><button (click)="openRateModal(flight)">Rate</button></div>
+            </div>
+            
         </div>
     </div>
 </div>
