@@ -23,8 +23,8 @@ export class HeaderComponent implements OnInit {
     this.cartService.cartItemCount$.subscribe((count) => {
       this.cartItemCount = count;
     });
-    console.log(typeof(this.dataService.getLoggedInSubject()));
-    console.log(this.dataService.getLoggedInSubject());
+    // console.log(typeof(this.dataService.getLoggedInSubject()));
+    // console.log(this.dataService.getLoggedInSubject());
    this.dataService.loggedInSubject$.subscribe(() => {
     this.loggedInUser = this.dataService.getLoggedInSubject();
    });

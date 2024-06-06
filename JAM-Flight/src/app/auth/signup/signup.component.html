@@ -27,8 +27,8 @@
             <input type="text" placeholder="Enter your address" id="address" name="address" ngModel required
               #addressinput="ngModel">
           </div>
-          <div class="form-group">
-            <input placeholder="Your date of birth" [matDatepicker]="picker" id="date" ngModel name="date" required #dateinput="ngModel">
+          <div class="form-group date-picker">
+            <input class="date-picker-input" placeholder="Your date of birth" [matDatepicker]="picker" id="date" ngModel name="date" required #dateinput="ngModel">
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
           </div> 

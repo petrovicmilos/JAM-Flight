@@ -11,6 +11,7 @@ import { FaqComponent } from './faq/faq.component';
 import { FlightDetailsComponent } from './flight-details/flight-details.component'; 
 import { FlightDetailsGuard } from './flight-details.guard';
 import { JournalComponent } from './journal/journal.component';
+import { BlogDetailComponent } from './blog-detail/blog-detail.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -23,7 +24,8 @@ const routes: Routes = [
   { path: 'faq', component: FaqComponent},
   { path: 'flight-details/:arrivalLocation', component: FlightDetailsComponent, canActivate: [FlightDetailsGuard],},
   { path: 'journal', component: JournalComponent},
-  { path: '',redirectTo: 'homepage', pathMatch: 'full'}
+  { path: '',redirectTo: 'homepage', pathMatch: 'full'},
+  { path: 'blog/:id', component: BlogDetailComponent},
 ];
 
 @NgModule({

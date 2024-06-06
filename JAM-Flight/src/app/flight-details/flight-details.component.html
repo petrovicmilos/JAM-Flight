@@ -26,7 +26,7 @@
             <p class="flight-details-bottom-left-text">Cabin: {{ flight.flightClass }} +</p>
           </div>
           <div>
-            <p class="flight-details-bottom-left-header">Seat</p>
+            <p class="flight-details-bottom-left-header">Seat (Available seats: {{ flight.availableSeats }})</p>
             <p class="flight-details-bottom-left-text">Seat Choice Included</p>
           </div>
           <div>
@@ -38,6 +38,10 @@
             <p class="flight-details-bottom-left-header">Flexibility</p>
             <p class="flight-details-bottom-left-text">Non-refundable</p>
           </div>
+          <div>
+            <p class="flight-details-bottom-left-header">Distance</p>
+            <p class="flight-details-bottom-left-text">{{ flight.distance }}</p>
+          </div>
         </div>
         <div class="flight-details-bottom-right">
           <div class="flight-details-bottom-right-header">No Added Services</div>
@@ -45,7 +49,11 @@
         </div>
     </div>
     <div class="buttonDIV">
-      <button (click)="addToCart()">Add to Cart</button>
+      <span *ngIf="!loggedInUser">Please login to proceed.</span>
+      <button 
+      [ngClass]="{'btn-disabled': !loggedInUser}" 
+      *ngIf="loggedInUser"
+      (click)="addToCart()">Add to Cart</button>
     </div>
 </div>
 </div>

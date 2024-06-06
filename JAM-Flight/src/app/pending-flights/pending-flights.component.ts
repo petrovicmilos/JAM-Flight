@@ -19,6 +19,11 @@ export class PendingFlightsComponent implements OnInit {
   }
 
   cancelFlight(flight: Flight) {
-    this.cartService.cancelFlight(flight);
+    if (confirm("Are you sure you want to cancel?")) {
+      this.cartService.cancelFlight(flight);
+    } else {
+      return false;
+    };
+    
   }
 }

@@ -33,6 +33,8 @@ import { FinishedFlightsComponent } from './finished-flights/finished-flights.co
 import { PendingFlightsComponent } from './pending-flights/pending-flights.component';
 import { CanceledFlightsComponent } from './canceled-flights/canceled-flights.component';
 import { CommonModule } from '@angular/common';
+import { BlogDetailComponent } from './blog-detail/blog-detail.component';
+
 
 @NgModule({
   declarations: [
@@ -56,7 +58,8 @@ import { CommonModule } from '@angular/common';
     JournalListComponent,
     FinishedFlightsComponent,
     PendingFlightsComponent,
-    CanceledFlightsComponent
+    CanceledFlightsComponent,
+    BlogDetailComponent
   ],
   imports: [
     CommonModule,
