@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Flight } from './flights-list/flights-list.model';
 
@@ -189,5 +189,10 @@ export class DataService {
   }
   public getLoggedInSubject(){
     return this.loggedInSubject.value;
+  }
+
+  getFlightByArrivalLocation(arrivalLocation: string): Observable<Flight> {
+    const flight = this.flights.find(f => f.arrivalLocation === arrivalLocation);
+    return of(flight);
   }
 }

@@ -22,7 +22,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent},
   { path: 'blog', component: BlogComponent},
   { path: 'faq', component: FaqComponent},
-  { path: 'flight-details/:arrivalLocation', component: FlightDetailsComponent, canActivate: [FlightDetailsGuard],},
+  { path: 'flight-details/:arrivalLocation', component: FlightDetailsComponent/* , canActivate: [FlightDetailsGuard], */},
   { path: 'journal', component: JournalComponent},
   { path: '',redirectTo: 'homepage', pathMatch: 'full'},
   { path: 'blog/:id', component: BlogDetailComponent},

@@ -19,8 +19,19 @@ export class FlightDetailsComponent implements OnInit {
 
   ngOnInit() {
     // Get the flight details from the service
-    this.flightDetailsService.selectedFlight$.subscribe((selectedFlight) => {
+   /*  this.flightDetailsService.selectedFlight$.subscribe((selectedFlight) => {
       this.flight = selectedFlight;
+    }); */
+
+     // Get the flight details from the service
+     this.route.paramMap.subscribe(params => {
+      const arrivalLocation = params.get('arrivalLocation');
+      if (arrivalLocation) {
+        this.dataService.getFlightByArrivalLocation(arrivalLocation).subscribe(flight => {
+          this.flight = flight;
+          this.flightDetailsService.setSelectedFlight(flight);
+        });
+      }
     });
 
     this.dataService.loggedInSubject$.subscribe(() => {
