@@ -1,0 +1,19 @@
+{
+  "lookup": {
+    "eJyLrq6NBQAEOAGx": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohvSg1taS2NhYA6dwbhQ==": "utter_greet",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohvSg1taSWgBmlJSWpRfEQpbhMiAUAQvc0lw==": "action_listen",
+    "eJydjkEKgDAMBL+SB/iCfkUklBKlqKmkqZeSvxuod8HbDgzDzt0m6JfQjTFpLhygj4EcTwrwwpGrErvbKok7mR01wCZEah+NpkqCQ/1X+HgR645rEUyF1VWz5QHT11KE": "action_contact",
+    "eJydzsEJgDAMheFVMoATdBWRUEqUoqaSpl5Kdzegnive8uDjJ2NtA9RD6EQfNCZ2UO8D2e/k4BlbzEpstmQSM5FtqoNFiLR1GkWVBG/6r9D5wucV5yQYEqvRj7VX93PTBfNWcM4=": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohvSg1taSWgBmlJSWpRfEQpeSZQMAVicXZ8Wn5RfFpiYW1tbEAjGtQ0A==": "action_faq",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohvSg1taSWgBmlJSWpRfEQpeSZQMAVicXZ8Wn5RfFpiYVEmgRSid+YWACyOGuy": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3BChdnB2flpOZnlFSWxsLAHiYHYo=": "action_find_flight",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3BChdnB2flpOZnlFSS5xBaZl5KTAdeE2LBQADkztS": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohvSg1taSWgBmlJSWpRfEQpeSZQMAVufn5KSDzE4EGxQIAPEFQdQ==": "utter_happy",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohvSg1taSWgBmlJSWpRfEQpeSZQMAVufn5KSDzE4l0SkZiQUElfmNiAVKZa5w=": "action_listen",
+    "eJydjlEKgCAQBa/iATqBV4lYJFZbMo117Uf27gn2L/T3BobhrU0X027GB9wulJM1bQxI7kJrPohUBFN3a0HuDqWOYk1gRNFJo4ogw1D/FSYvXDnBZwYfKRxSVLcX09JSiQ==": "action_recommend_flights",
+    "eJydjsEJgDAQBFtJAVaQVkSOoKsGzUUup59g7wYUvxF/uzA7bJvPxuRNcJDr1Ue2Jt+B2AVY85TVJwUXdk+QwnguVa2ZBNCz4thVIXSj/wyVFy4tNEahcfXTrOmjTdDHEMDDu6uLuwt9sXT2": "action_listen",
+    "eJydjksKgDAMBa+SA3iCXkUkFElrsB9JUzeld7dQ94K7NzAMb219gXYJ3Wh35ZwMtDkw2UgGXghclNJwayEZDqeBasALkfaPRlUlwan+K3y8sOVElwVjFkIX2B9aet8edkVUmw==": "action_offer_more_flights",
+    "eJydjkEKgCAURK/iATqBV4n4SIwlmcb310a8e4Kt2hjtZuDNY8ZcBpUPxkVmFheDVrkFCmaHVk/xLglCZc8ErowLtYpWCwNSOo5TBEwN/WfovDBpIxuZ9sgg692ySvqojNbiNfyon26ryXmE": "action_listen"
+  }
+}

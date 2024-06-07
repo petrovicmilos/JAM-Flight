@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+  .rw-carousel-container {
+    min-height: 0px !important;
+  }
+
+  .rw-carousel-card {
+    min-height: 0px !important;
+  }
+
+  .rw-carousel-arrows-container .rw-carousel-arrow:hover {
+    top: calc(30% - 3px) !important;
+  }
+
+  .rw-carousel-arrows-container .rw-carousel-arrow {
+    top: 30% !important;
+  }
+
+  .rw-conversation-container .rw-header {
+    background-color: #009688;
+  }
+
+  .rw-launcher {
+    background-color: #009688;
+    cursor: pointer;
+  }
+
+  .rw-conversation-container .rw-client {
+    background-color: #009688;
+  }
+
+  .rw-conversation-container .rw-reply {
+    background-color: #009688;
+    border: 1px solid #009688;
+  }
+
+  .rw-conversation-container .rw-header .rw-avatar {
+    all: initial;
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    top: 10px;
+    left: 14px;
+  }
+
+.rw-conversation-container .rw-avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    margin-right: 6px;
+    position: relative;
+    bottom: 5px;
+  }
+
+  .rw-conversation-container .rw-send .rw-send-icon-ready {
+    fill: #009688;
+  }
+
+    </style>
+
+    <script>
+        !(function () {
+            let e = document.createElement("script"),
+              t = document.head || document.getElementsByTagName("head")[0];
+            (e.src =
+              "https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.js"),
+              // Replace 1.x.x with the version that you want
+              (e.async = !0),
+              (e.onload = () => {
+                window.WebChat.default(
+                  {
+                    title: 'JAM Flight assistant',
+                    initPayload: '/greet',
+                    customData: { language: "en" },
+                    socketUrl: "http://localhost:5005",
+                    // add other props here
+                    profileAvatar: "./img/botProfile.PNG",
+                    openLauncherImage: "./img/chatIcon.png",
+                    showFullScreenButton: true,
+                    showMessageDate: true,
+                    inputTextFieldHint: 'Type here.',
+                    clearSession: true,
+                    customCss: true // Enable custom CSS
+                  },
+                  null
+                );
+              }),
+              t.insertBefore(e, t.firstChild);
+          })();
+      </script>
+</body>
+</html>

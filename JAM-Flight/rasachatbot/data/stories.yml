@@ -1,0 +1,43 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: booking flight assistence 
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_for_flights
+    - action: action_recommend_flights
+
+- story: asking for more flights
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_for_more_flights
+    - action: action_offer_more_flights
+
+- story: asking for faq
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_for_faq
+    - action: action_faq
+
+- story: asking for contact
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_for_contact
+    - action: action_contact
+
+- story: User asks to find a flight
+  steps:
+    - intent: ask_flight
+    - action: action_find_flight
