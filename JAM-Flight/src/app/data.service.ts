@@ -21,7 +21,8 @@ export class DataService {
       flightClass: 'Economy',
       availableSeats: 100,
       price: '$100',
-      rating: 4.5
+      rating: 4.5,
+      comment: '',
     },
     {
       id: 1,
@@ -36,7 +37,8 @@ export class DataService {
       flightClass: 'Business',
       availableSeats: 80,
       price: '$300',
-      rating: 4.8
+      rating: 4.8,
+      comment: ''
     },
     {
       id: 2,
@@ -51,7 +53,8 @@ export class DataService {
       flightClass: 'Economy',
       availableSeats: 120,
       price: '$150',
-      rating: 4.2
+      rating: 4.2,
+      comment: ''
     },
     {
       id: 3,
@@ -66,7 +69,8 @@ export class DataService {
       flightClass: 'First Class',
       availableSeats: 50,
       price: '$600',
-      rating: 4.9
+      rating: 4.9,
+      comment: ''
     },
     {
       id: 4,
@@ -81,7 +85,8 @@ export class DataService {
       flightClass: 'Economy',
       availableSeats: 90,
       price: '$120',
-      rating: 4.4
+      rating: 4.4,
+      comment: ''
     },
     {
       id: 5,
@@ -96,7 +101,8 @@ export class DataService {
       flightClass: 'Business',
       availableSeats: 75,
       price: '$280',
-      rating: 4.7
+      rating: 4.7,
+      comment: ''
     },
     {
       id: 6,
@@ -111,7 +117,8 @@ export class DataService {
       flightClass: 'Economy',
       availableSeats: 110,
       price: '$110',
-      rating: 4.3
+      rating: 4.3,
+      comment: ''
     },
     {
       id: 7,
@@ -126,7 +133,8 @@ export class DataService {
       flightClass: 'First Class',
       availableSeats: 60,
       price: '$700',
-      rating: 4.9
+      rating: 4.9,
+      comment: ''
     },
     {
       id: 8,
@@ -141,7 +149,8 @@ export class DataService {
       flightClass: 'Economy',
       availableSeats: 95,
       price: '$130',
-      rating: 4.6
+      rating: 4.6,
+      comment: ''
     },
     {
       id: 9,
@@ -156,7 +165,8 @@ export class DataService {
       flightClass: 'Business',
       availableSeats: 70,
       price: '$340',
-      rating: 4.8
+      rating: 4.8,
+      comment: ''
     }
   ];
   private filterCriteriaSubject = new BehaviorSubject<Flight>(null);
@@ -168,7 +178,7 @@ export class DataService {
   getFilteredData(data: Flight[]): Observable<Flight[]> {
     return this.filterCriteria$.pipe(
       map((filterCriteria: Flight) => {
-        return data.filter((row: Flight) => {
+        return data?.filter((row: Flight) => {
           return Object?.keys(filterCriteria).every(key => {
             const value = row[key]?.toString().toLowerCase();
             const filterValue = filterCriteria[key]?.toString().toLowerCase();

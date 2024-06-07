@@ -1,0 +1,50 @@
+.rate-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.rate-form h3 {}
+
+.rate-form button {
+    border: none;
+    color: white;
+    background-color: #009688;
+    width: 30%;
+    margin: auto;
+    margin-top: 15px;
+    border-radius: 6px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.stars {
+    margin-top: -10px;
+    margin-bottom: 20px;
+    display: inline-block;
+    font-size: 24px;
+    color: grey;
+    /* Žuta boja za zvezdice */
+}
+
+.stars .fa {
+    cursor: pointer;
+}
+
+.stars .fa.rated {
+    color: #ffd700;
+    /* Žuta boja za obojene zvezdice */
+}
+
+.stars .fa.not-rated {
+    color: #ccc;
+    /* Siva boja za neobojene zvezdice */
+}
+
+.rate-form textarea {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+}

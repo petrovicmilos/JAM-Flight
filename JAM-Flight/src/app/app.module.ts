@@ -34,6 +34,8 @@ import { PendingFlightsComponent } from './pending-flights/pending-flights.compo
 import { CanceledFlightsComponent } from './canceled-flights/canceled-flights.component';
 import { CommonModule } from '@angular/common';
 import { BlogDetailComponent } from './blog-detail/blog-detail.component';
+import { StarRatingComponent } from './star-rating/star-rating.component';
+import { RateFormComponent } from './rate-form/rate-form.component';
 
 
 @NgModule({
@@ -59,7 +61,9 @@ import { BlogDetailComponent } from './blog-detail/blog-detail.component';
     FinishedFlightsComponent,
     PendingFlightsComponent,
     CanceledFlightsComponent,
-    BlogDetailComponent
+    BlogDetailComponent,
+    StarRatingComponent,
+    RateFormComponent
   ],
   imports: [
     CommonModule,

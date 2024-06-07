@@ -12,4 +12,6 @@ export interface Flight {
     availableSeats: number;
     price: string;
     rating: number;
+    comment: string;
+    showRatingForm?: boolean;
 }

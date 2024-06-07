@@ -1,59 +1,64 @@
 <div id="flight-details-mainDIV">
-<div id="flight-details">
+  <div id="flight-details">
     <div class="flight-details-header">
-        <h4> Flight Details</h4>
+      <h4> Flight Details</h4>
     </div>
     <div class="flight-details-top">
-        <div class="flightDetailsSecondPartFlightScheme">
-            <div>
-              <div class="flightDetailsSecondPartFlightSchemeUpper"><span>{{ flight.departureTime }}</span></div>
-              <div class="flightDetailsSecondPartFlightSchemeLower"><span>{{ flight.departureLocation}}</span></div>
-            </div>
-            <div>
-              <div class="flightDetailsSecondPartFlightSchemeUpper"><span> ------ <mat-icon>flight_takeoff</mat-icon> ------ </span></div>
-              <div class="flightDetailsSecondPartFlightSchemeLower"><span> {{ flight.duration }} </span></div>
-            </div>
-            <div>
-              <div class="flightDetailsSecondPartFlightSchemeUpper"><span>{{ flight.arrivalTime }}</span></div>
-              <div class="flightDetailsSecondPartFlightSchemeLower"><span>{{ flight.arrivalLocation }}</span></div>
-            </div>
-          </div>
+      <div class="flightDetailsSecondPartFlightScheme">
+        <div>
+          <div class="flightDetailsSecondPartFlightSchemeUpper"><span>{{ flight.departureTime }}</span></div>
+          <div class="flightDetailsSecondPartFlightSchemeLower"><span>{{ flight.departureLocation}}</span></div>
+        </div>
+        <div>
+          <div class="flightDetailsSecondPartFlightSchemeUpper"><span> ------ <mat-icon>flight_takeoff</mat-icon> ------
+            </span></div>
+          <div class="flightDetailsSecondPartFlightSchemeLower"><span> {{ flight.duration }} </span></div>
+        </div>
+        <div>
+          <div class="flightDetailsSecondPartFlightSchemeUpper"><span>{{ flight.arrivalTime }}</span></div>
+          <div class="flightDetailsSecondPartFlightSchemeLower"><span>{{ flight.arrivalLocation }}</span></div>
+        </div>
+      </div>
     </div>
     <div class="flight-details-bottom">
-        <div class="flight-details-bottom-left">
-          <div class="flight-details-bottom-left-flightClass">
-            <p class="flight-details-bottom-left-flightClass-header"> {{ flight.flightClass }} </p>
-            <p class="flight-details-bottom-left-text">Cabin: {{ flight.flightClass }} +</p>
-          </div>
-          <div>
-            <p class="flight-details-bottom-left-header">Seat (Available seats: {{ flight.availableSeats }})</p>
-            <p class="flight-details-bottom-left-text">Seat Choice Included</p>
-          </div>
-          <div>
-            <p class="flight-details-bottom-left-header">Bag</p>
-            <p class="flight-details-bottom-left-text" style="margin-bottom: 0;">1 Cabin Baggage</p>
-            <p class="flight-details-bottom-left-text">1 Checked Baggage</p>
-          </div>
-          <div>
-            <p class="flight-details-bottom-left-header">Flexibility</p>
-            <p class="flight-details-bottom-left-text">Non-refundable</p>
-          </div>
-          <div>
-            <p class="flight-details-bottom-left-header">Distance</p>
-            <p class="flight-details-bottom-left-text">{{ flight.distance }}</p>
-          </div>
+      <div class="flight-details-bottom-left">
+        <div class="flight-details-bottom-left-flightClass">
+          <p class="flight-details-bottom-left-flightClass-header"> {{ flight.flightClass }} </p>
+          <p class="flight-details-bottom-left-text">Cabin: {{ flight.flightClass }} +</p>
         </div>
-        <div class="flight-details-bottom-right">
-          <div class="flight-details-bottom-right-header">No Added Services</div>
-          <div class="flight-details-bottom-right-img"><img src="../../assets/flight-details-plane.png" alt="flight-details-plane"></div>
+        <div>
+          <p class="flight-details-bottom-left-header">Seat (Available seats: {{ flight.availableSeats }})</p>
+          <p class="flight-details-bottom-left-text">Seat Choice Included</p>
         </div>
+        <div>
+          <p class="flight-details-bottom-left-header">Bag</p>
+          <p class="flight-details-bottom-left-text" style="margin-bottom: 0;">1 Cabin Baggage</p>
+          <p class="flight-details-bottom-left-text">1 Checked Baggage</p>
+        </div>
+        <div>
+          <p class="flight-details-bottom-left-header">Flexibility</p>
+          <p class="flight-details-bottom-left-text">Non-refundable</p>
+        </div>
+        <div>
+          <p class="flight-details-bottom-left-header">Distance</p>
+          <p class="flight-details-bottom-left-text">{{ flight.distance }}</p>
+        </div>
+      </div>
+      <div class="flight-details-bottom-right">
+        <div class="flight-details-bottom-right-header">No Added Services</div>
+        <div class="flight-details-bottom-right-img"><img src="../../assets/flight-details-plane.png"
+            alt="flight-details-plane"></div>
+      </div>
     </div>
     <div class="buttonDIV">
       <span *ngIf="!loggedInUser">Please login to proceed.</span>
-      <button 
-      [ngClass]="{'btn-disabled': !loggedInUser}" 
-      *ngIf="loggedInUser"
-      (click)="addToCart()">Add to Cart</button>
+      <button [ngClass]="{'btn-disabled': !loggedInUser}" *ngIf="loggedInUser" (click)="addToCart()">Add to
+        Cart</button>
     </div>
-</div>
+    <div *ngIf="userRating" class="user-rating">
+      <h4>User Rating</h4>
+      <p><strong>{{ userRating.user.name }}</strong> <div class="rating"><span>Rating: {{ flight.rating }} </span><app-star-rating [rating]="userRating.rating"></app-star-rating></div>
+      <p>Comment: {{ userRating.comment }}</p>
+    </div>
+  </div>
 </div>

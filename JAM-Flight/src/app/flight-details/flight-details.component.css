@@ -121,3 +121,12 @@
     padding: 0 8px 0 8px;
     cursor: pointer;
 }
+
+.rating {
+    display: flex;
+    align-items: center;
+}
+
+.rating span {
+    margin-right: 5px;
+}
