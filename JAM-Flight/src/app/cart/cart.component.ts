@@ -44,6 +44,7 @@ export class CartComponent implements OnInit {
       });
     setTimeout(() => {
       this.router.navigate(['journal']);
+      this.cartService.clearCart();
     }, 1000);
     } else {
       return false;

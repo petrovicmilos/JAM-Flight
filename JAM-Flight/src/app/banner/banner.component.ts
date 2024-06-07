@@ -23,6 +23,7 @@ export class BannerComponent implements OnInit{
     flightClass: '',
     availableSeats: 0,
     price: '',
+    image: '',
     rating: 0,
     comment: ''
   };

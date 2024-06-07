@@ -21,6 +21,7 @@ export class DataService {
       flightClass: 'Economy',
       availableSeats: 100,
       price: '$100',
+      image: '../assets/Barcelona.jpg',
       rating: 4.5,
       comment: '',
     },
@@ -37,6 +38,7 @@ export class DataService {
       flightClass: 'Business',
       availableSeats: 80,
       price: '$300',
+      image: '../assets/Paris.jpg',
       rating: 4.8,
       comment: ''
     },
@@ -53,6 +55,7 @@ export class DataService {
       flightClass: 'Economy',
       availableSeats: 120,
       price: '$150',
+      image: '../assets/Rome.jpg',
       rating: 4.2,
       comment: ''
     },
@@ -69,6 +72,7 @@ export class DataService {
       flightClass: 'First Class',
       availableSeats: 50,
       price: '$600',
+      image: '../assets/Berlin.jpg',
       rating: 4.9,
       comment: ''
     },
@@ -85,6 +89,7 @@ export class DataService {
       flightClass: 'Economy',
       availableSeats: 90,
       price: '$120',
+      image: '../assets/Vienna.jpg',
       rating: 4.4,
       comment: ''
     },
@@ -101,6 +106,7 @@ export class DataService {
       flightClass: 'Business',
       availableSeats: 75,
       price: '$280',
+      image: '../assets/Amsterdam.jpg',
       rating: 4.7,
       comment: ''
     },
@@ -117,6 +123,7 @@ export class DataService {
       flightClass: 'Economy',
       availableSeats: 110,
       price: '$110',
+      image: '../assets/Prague.jpg',
       rating: 4.3,
       comment: ''
     },
@@ -133,6 +140,7 @@ export class DataService {
       flightClass: 'First Class',
       availableSeats: 60,
       price: '$700',
+      image: '../assets/Zurich.jpg',
       rating: 4.9,
       comment: ''
     },
@@ -149,6 +157,7 @@ export class DataService {
       flightClass: 'Economy',
       availableSeats: 95,
       price: '$130',
+      image: '../assets/Budapest.jpg',
       rating: 4.6,
       comment: ''
     },
@@ -165,6 +174,7 @@ export class DataService {
       flightClass: 'Business',
       availableSeats: 70,
       price: '$340',
+      image: '../assets/Copenhagen.jpg',
       rating: 4.8,
       comment: ''
     }

@@ -80,4 +80,11 @@ export class CartService {
   getCartItems() {
     return this.cartItemsSubject.value;
   }
+
+  clearCart() {
+    this.cartItemsSubject.next([]);
+    this.cartTotalPriceSubject.next(0);
+    this.cartItemCountSubject.next(0);
+    
+  }
 }
