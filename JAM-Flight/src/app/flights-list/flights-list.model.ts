@@ -11,5 +11,8 @@ export interface Flight {
     flightClass: string;
     availableSeats: number;
     price: string;
+    image: string;
     rating: number;
+    comment: string;
+    showRatingForm?: boolean;
 }

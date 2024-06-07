@@ -1,0 +1,6 @@
+[
+  {
+    "name": "destination",
+    "pattern": "(\\bBarcelona\\b|\\bbarcelona\\b|\\bBarça\\b|\\bbarça\\b|\\bParis\\b|\\bparis\\b|\\bRome\\b|\\brome\\b|\\bBerlin\\b|\\bberlin\\b|\\bVienna\\b|\\bvienna\\b|\\bAmsterdam\\b|\\bamsterdam\\b|\\bPrague\\b|\\bprague\\b|\\bZurich\\b|\\bzurich\\b|\\bBudapest\\b|\\bbudapest\\b|\\bCopenhagen\\b|\\bcopenhagen\\b)"
+  }
+]

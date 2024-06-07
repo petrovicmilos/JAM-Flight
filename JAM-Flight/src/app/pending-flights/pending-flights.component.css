@@ -1,0 +1,152 @@
+#pending-flights {
+  text-align: center;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tableOfContent {
+  width: 120%;
+  margin-top: 10px;
+}
+
+.flightCard {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 250px;
+  margin-top: 5%;
+  border-radius: 10px;
+  display: flex;
+}
+
+
+.flightCardImg {
+  /* flex-grow: 1.5; */
+}
+
+
+.flightCard img {
+  width: 280px;
+  height: 100%;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.flightDetails {
+  flex-grow: 8.5;
+  display: flex;
+  flex-direction: column;
+}
+
+.flightDetailsParts {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* FIRST PART STARTS HERE */
+
+.flightDetailsFirstPart {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+.flightDetailsFirstPartArrivalLocation {
+  font-weight: 600;
+  font-size: 30px;
+  /* margin: 0 0 0 10px; */
+  text-align: left;
+}
+
+.flightDetailsFirstPartAirline {
+  font-weight: 450;
+  font-size: 20px;
+  margin: 0 10px 0 0;
+  background-color: rgb(240, 239, 239);
+  padding: 7px;
+  border-radius: 10px;
+}
+
+.flightDetailsFirstPartDate {
+  font-size: 20px;
+  margin: 20px 0 0 0;
+  text-align: left;
+}
+
+.flightDetailsFirstPartflightClass {
+  margin: 5px 0 0 5px;
+  font-size: 15px;
+}
+
+.flightDetailsFirstPartPrice {
+  font-weight: 500;
+  font-size: 20px;
+  margin: 0 20px 0 0;
+}
+
+/* FIRST PART ENDS HERE */
+
+/* SECOND PART STARTS HERE */
+
+.flightDetailsSecondPart {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+.flightDetailsSecondPartFlightScheme {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: -10px;
+}
+
+.flightDetailsSecondPartFlightSchemeUpper {
+  font-size: 35px;
+  padding: 10px;
+}
+
+.flightDetailsSecondPartFlightSchemeLower {
+  align-items: center;
+}
+
+.flightDetailsSecondPartButtonArea {
+  margin: 0 10px 0 0;
+}
+
+.flightDetailsSecondPartButton {
+  color: white;
+  background-color: #009688;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+  width: 100px;
+  height: 45px;
+  padding: 0 8px 0 8px;
+  cursor: pointer;
+}
+
+.flightDetailsSecondPartCancelButton {
+  color: white;
+  background-color: #b34607;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+  width: 100px;
+  height: 45px;
+  padding: 0 8px 0 8px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+
+/* SECOND PART ENDS HERE */

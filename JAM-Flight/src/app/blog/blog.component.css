@@ -1,7 +1,20 @@
-.jumbotron {
-    background-image: url(https://www.travelassociates.com/sites/v2.travel-associates.com.au/files/Flights-small-640x480.jpg);
-    background-position: center;
-    background-size: cover;
-    border-radius: 0 !important;
-    color: black;
-}
+.blog-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .blog-post {
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;
+  }
+  
+  .read-more-link {
+    color: #009688;
+    text-decoration: none;
+  }
+  
+  .read-more-link:hover {
+    text-decoration: underline;
+  }
+  

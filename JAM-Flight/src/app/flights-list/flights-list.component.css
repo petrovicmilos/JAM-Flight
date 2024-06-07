@@ -1,4 +1,4 @@
-.flights-list {
+#flights-list {
     text-align: center;
     margin-top: 60px;
     display: flex;
@@ -22,11 +22,11 @@
 }
 
 .flightCardImg {
-  flex-grow: 1.5;
+  /* flex-grow: 1; */
 }
 
 .flightCard img {
-  width: 100%;
+  width: 280px;
   height: 100%;
   border-radius: 10px;
   background-repeat: no-repeat;
@@ -59,7 +59,7 @@
 .flightDetailsFirstPartArrivalLocation {
   font-weight: 600;
   font-size: 30px;
-  margin: 0 0 0 10px;
+  /* margin: 0 0 0 10px; */
   text-align: left;
 }
 
@@ -74,12 +74,12 @@
 
 .flightDetailsFirstPartDate {
   font-size: 20px;
-  margin: 20px 0 0 20px;
+  margin: 20px 0 0 0;
   text-align: left;
 }
 
 .flightDetailsFirstPartflightClass {
-  margin: 5px 0 0 0;
+  margin: 5px 0 0 5px;
   font-size: 15px;
 }
 
@@ -104,6 +104,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  margin-left: -10px;
 }
 
 .flightDetailsSecondPartFlightSchemeUpper {

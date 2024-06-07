@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AvailableFlightsComponent } from './available-flights/available-flights.component';
 import { BannerComponent } from './banner/banner.component';
@@ -21,13 +20,23 @@ import { UserService } from './auth/user.service';
 import {HomepageComponent} from "./homepage/homepage.component";
 import {LoginComponent} from "./auth/login/login.component";
 import {SignupComponent} from "./auth/signup/signup.component";
+import { ProfileComponent } from './auth/profile/profile.component';
 import { CartComponent } from './cart/cart.component';
 import { ContactComponent } from './contact/contact.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FaqComponent } from './faq/faq.component';
 import { BlogComponent } from './blog/blog.component';
-import { FlightHistoryComponent } from './flight-history/flight-history.component';
 import { FlightDetailsComponent } from './flight-details/flight-details.component';
+import { JournalComponent } from './journal/journal.component';
+import { JournalListComponent } from './journal-list/journal-list.component';
+import { FinishedFlightsComponent } from './finished-flights/finished-flights.component';
+import { PendingFlightsComponent } from './pending-flights/pending-flights.component';
+import { CanceledFlightsComponent } from './canceled-flights/canceled-flights.component';
+import { CommonModule } from '@angular/common';
+import { BlogDetailComponent } from './blog-detail/blog-detail.component';
+import { StarRatingComponent } from './star-rating/star-rating.component';
+import { RateFormComponent } from './rate-form/rate-form.component';
+
 
 @NgModule({
   declarations: [
@@ -41,17 +50,27 @@ import { FlightDetailsComponent } from './flight-details/flight-details.componen
     HomepageComponent,
     LoginComponent,
     SignupComponent,
+    ProfileComponent,
     CartComponent,
     ContactComponent,
     FaqComponent,
     BlogComponent,
-    FlightHistoryComponent,
-    FlightDetailsComponent
+    FlightDetailsComponent,
+    JournalComponent,
+    JournalListComponent,
+    FinishedFlightsComponent,
+    PendingFlightsComponent,
+    CanceledFlightsComponent,
+    BlogDetailComponent,
+    StarRatingComponent,
+    RateFormComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    MaterialModule,
     MatInputModule,
     MatButtonModule,
     MatCardModule,
@@ -59,6 +78,10 @@ import { FlightDetailsComponent } from './flight-details/flight-details.componen
     BrowserAnimationsModule,
     ReactiveFormsModule,
     MatSnackBarModule,
+
+  ],
+  exports: [
+    FinishedFlightsComponent
   ],
   providers: [DataService, UserService],
   bootstrap: [AppComponent]

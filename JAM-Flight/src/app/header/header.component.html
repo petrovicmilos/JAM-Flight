@@ -2,6 +2,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <div class="logo"><a [routerLink]="'homepage'">JAMFlights</a></div>
     <div class="buttons">
+        <div><a [routerLink]="'journal'" *ngIf="loggedInUser" class="jornal-link">Journal</a></div>
         <div class="cart">
             <a class="cart-link" href="#" [routerLink]="'cart'">
                 <span class="cart-count" *ngIf="cartItemCount > 0">{{ cartItemCount }}</span>
@@ -9,7 +10,9 @@
                 Cart
             </a>
         </div>
-        <a class="login-button" href="#" [routerLink]="'login'">Login</a>
-        <a class="signup-button" href="#" [routerLink]="'signup'">Sign Up</a>
+        <a *ngIf="!loggedInUser" class="login-button" href="#" [routerLink]="'login'">Login</a>
+        <a *ngIf="!loggedInUser" class="signup-button" href="#" [routerLink]="'signup'">Sign Up</a>
+        <button *ngIf="loggedInUser" mat-raised-button style="background-color: #009688; color: white;" (click)="openProfile(this.userService.currentUser.id)">{{ this.userService.currentUser.email }}</button>
+        <a *ngIf="loggedInUser" (click)="signOut()" class="signup-button" href="#" [routerLink]="'homepage'">Sign Out</a>
     </div>
 </div>

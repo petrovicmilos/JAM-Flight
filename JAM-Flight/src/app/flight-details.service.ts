@@ -16,5 +16,4 @@ export class FlightDetailsService {
   getSelectedFlight(): Flight {
     return this.selectedFlightSubject.value;
   }
-
 }

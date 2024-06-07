@@ -1,0 +1,13 @@
+<div id="journal-list-main-div">
+    <div *ngIf="selectedTab === 'pending'">
+        <app-pending-flights></app-pending-flights>
+    </div>
+    
+    <div *ngIf="selectedTab === 'finished'">
+        <app-finished-flights></app-finished-flights>
+    </div>
+    
+    <div *ngIf="selectedTab === 'canceled'">
+        <app-canceled-flights></app-canceled-flights>
+    </div>
+</div>

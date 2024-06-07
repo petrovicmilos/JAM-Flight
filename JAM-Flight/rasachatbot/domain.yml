@@ -1,0 +1,70 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - bot_challenge
+  - ask_for_flights
+  - ask_for_more_flights
+  - ask_for_faq
+  - ask_for_contact
+  - ask_flight
+
+responses:
+  utter_greet:
+  - text: "Hello! Welcome to JAM Flight. How may I assist you today?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+actions:
+  - action_offer_more_flights
+  - action_recommend_flights
+  - action_faq
+  - action_contact
+  - action_find_flight
+
+entities:
+  - destination
+
+synonyms:
+- city: Barcelona
+  synonyms: [Barcelona, barcelona, Barça, barça]
+- city: Paris
+  synonyms: [Paris, paris]
+- city: Rome
+  synonyms: [Rome, rome]
+- city: Berlin
+  synonyms: [Berlin, berlin]
+- city: Vienna
+  synonyms: [Vienna, vienna]
+- city: Amsterdam
+  synonyms: [Amsterdam, amsterdam]
+- city: Prague
+  synonyms: [Prague, prague]
+- city: Zurich
+  synonyms: [Zurich, zurich]
+- city: Budapest
+  synonyms: [Budapest, budapest]
+- city: Copenhagen
+  synonyms: [Copenhagen, copenhagen]
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,302 @@
+version: "3.1"
+
+nlu:
+
+- lookup: destination
+  examples: |
+    - Barcelona
+    - barcelona
+    - Barça
+    - barça
+    - Paris
+    - paris
+    - Rome
+    - rome
+    - Berlin
+    - berlin
+    - Vienna
+    - vienna
+    - Amsterdam
+    - amsterdam
+    - Prague
+    - prague
+    - Zurich
+    - zurich
+    - Budapest
+    - budapest
+    - Copenhagen
+    - copenhagen
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - whatsap
+    - whats going on
+    - howdy
+    - how are you doing
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - cya
+    - c ya
+    - c u later
+    - byeee bye
+    - I'll see you around
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - absolutely
+    - sure
+    - definitely
+    - alright
+    - affirmative
+    - yeah
+    - that's right
+    - OK
+    - I agree
+    - definitely yes
+    - yup
+    - precisely
+    - you're right
+    - agreed
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - absolutely not
+    - not at all
+    - I don't want to
+    - definitely not
+    - nope
+    - I refuse
+    - that's not for me
+    - not interested
+    - I won't
+    - no, thanks
+    - not happening
+    - I'm not in
+    - can't agree to that
+    - nah
+    - that's a no
+    - I'm against it
+    - I'd rather not
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+#User asking for flight
+- intent: ask_for_flights
+  examples: |
+    - Buy airplane ticket
+    - Iwant to book flight
+    - I want to book a flight
+    - I wnt to bok a flight
+    - I want to bok a fligh
+    - Can you recommend me a flight?
+    - Is there a flight available?
+    - flight
+    - I want to buy ticket
+    - Do you have tickets
+    - I want to book one ticket
+    - I want to book ticket
+    - book flights
+    - book interesting flights
+    - I want to buy an airplane ticket
+    - I need to book a flight
+    - book a flight for me
+    - Can you help me book a flight
+    - Are there any flights available
+    - can I buy a flight ticket?
+    - do you have any flights
+    - I need a ticket for a flight
+    - help me book a flight
+    - I want to reserve a flight
+    - Is there a flight I can book?
+    - I want to purchase a ticket
+    - i need to book a plane ticket
+    - can I book a flight here?
+    - book a ticket for me
+    - I want to book an airline ticket
+    - How can I book a flight
+    - I'd like to book a flight
+    - Can you assist me with booking a flight
+    - I need to buy a flight ticket
+
+#User asking to book other flight after getting offered most popular flights
+- intent: ask_for_more_flights
+  examples: |
+    - I don't want any of those flights
+    - I want other
+    - I don't want
+    - not good flights
+    - i not interested in those
+    - not that interested, can you offer more?
+    - I am not sure I'd enjoy any of offered locations
+    - can you offer some more flights
+    - those are no good
+    - I will think about those, offer more
+    - cannot that, get other
+    - I will not go on one of those, recommend me other
+    - Let me see whole list
+    - I want to book other flight
+    - I don't want to book those, offer more
+    - Not booking, offer different flights
+    - I want other options
+    - I don't want these
+    - these flights are not good
+    - i am not interested in those
+    - not that interested, can you offer more
+    - can you show more flights
+    - those are no good
+    - I'll think about those, offer more
+    - cannot take that, get other
+    - I won't go on one of those, recommend something else
+    - Let me see the whole list
+    - I want to book a different flight
+    - I don't want to book these, offer more
+    - Not booking these, offer different flights
+    - show me other flights
+    - these flights don't work for me
+    - I need other flight options
+    - I'm looking for different flights
+
+#User asking for FAQ or telling that they have a question
+- intent: ask_for_faq
+  examples: |
+    - faq
+    - can you tell me faq
+    - show me where there are faq
+    - get me to faq
+    - get me to frequently asked questions tab
+    - what questions are frequently asked here?
+    - I have some more questions
+    - I want to ask about
+    - I have few questions
+    - got to ask
+    - i want to ask something
+    - faq page
+    - can you show me the faq
+    - where can I find faq?
+    - take me to faq section
+    - where is the frequently asked questions tab?
+    - show me frequently asked questions
+    - what are the common questions here?
+    - I have a few more questions
+    - I need to ask about
+    - I have some questions
+    - got a question
+    - i need to ask something
+    - where are the frequently asked questions?
+    - how can I see the faq?
+    - tell me the faq
+    - faq section please
+    - can I view the faq?
+    - where can I see the faq page
+    - show faq
+    - how to find faq?
+
+#User asking for contact information
+- intent: ask_for_contact
+  examples: |
+    - Do you have contact information
+    - Can I get information about this company
+    - Who can I call to ask about flights
+    - What is your phone number
+    - what is your email
+    - give email 
+    - give contacts
+    - give number
+    - tell me number
+    - tell me contact
+    - How can I reach customer service?
+    - do you have a support email?
+    - what's the best way to contact you
+    - Can I get the customer care number
+    - how do I contact support
+    - What is your customer service number
+    - can you provide the contact details
+    - how do I get in touch with someone?
+    - could you give me the helpdesk number?
+    - where can I find your contact information
+    - what is the phone number for inquiries?
+    - Is there an email address I can use to contact you?
+    - can you share your contact details
+    - what's the email for support
+    - how can I get in touch with your team?
+    - who do I contact for more information
+    - i need your contact information
+    - How do I call your support team
+    - can I get your office phone number?
+    - please provide the contact number
+
+- intent: ask_flight
+  examples: |
+    - Can you please find a flight for [Barcelona](destination)?
+    - I need to travel to [New York](destination). Can you help me find a flight?
+    - Find a flight to [new york](destination)
+    - I want to go to [NYC](destination)
+    - I want to fly to [city](destination).
+    - Can you find a flight to [Berlin](destination)?
+    - I'm planning a trip to [Paris](destination).
+    - Please search for flights to [Vienna](destination).
+    - I want to fly to [Amsterdam](destination).
+    - Find me a flight to [Prague](destination).
+    - I need to go to [Zurich](destination).
+    - Book a flight to [Budapest](destination).
+    - Check flights to [Copenhagen](destination).
+    - Check flights to [Rome](destination).

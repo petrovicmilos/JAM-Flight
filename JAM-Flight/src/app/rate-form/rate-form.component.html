@@ -1,0 +1,9 @@
+<div class="rate-form">
+    <h3>Rate this flight</h3>
+    <div class="stars">
+        <i class="fa fa-star" [ngClass]="{'rated': star <= rating, 'not-rated': star > rating}" 
+           *ngFor="let star of [1,2,3,4,5]" (click)="setRating(star)"></i>
+    </div>
+    <textarea [(ngModel)]="comment" placeholder="Leave a comment"></textarea>
+    <button (click)="submitRating()">Submit</button>
+</div>

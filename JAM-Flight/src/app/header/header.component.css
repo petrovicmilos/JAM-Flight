@@ -20,14 +20,29 @@
 /* Style for the login and sign up buttons */
 .buttons {
   display: flex;
+  align-items: center;
 }
 
 .login-button, .signup-button {
   margin-left: 10px;
 }
 
+.jornal-link {
+  color: #000; /* Black text */
+  text-decoration: none;
+  margin-right: 10px;
+  font-weight: 600;
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.jornal-link:hover {
+  background-color: #e9e6e6;
+}
+
 /* Style for button links */
-.login-button, .signup-button {
+.login-button, .signup-button, .profile-button{
   margin-left: 10px;
   padding: 10px 15px;
   border-radius: 5px;
@@ -80,4 +95,9 @@
   width: 20px;
   background-color: #009688;
   text-align: center;
+}
+
+.profile-button {
+  background-color: #fff; /* White background */
+  color: #000; /* Black text */
 }

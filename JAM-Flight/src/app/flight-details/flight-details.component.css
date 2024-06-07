@@ -1,4 +1,4 @@
-#flight-details-mainDIV {}
+/* #flight-details-mainDIV {} */
 
 #flight-details {
     display: flex;
@@ -102,6 +102,12 @@
     display: flex;
     justify-content: right;
     margin-top: 30px;
+    align-items: center;
+}
+
+.buttonDIV span {
+    margin-right: 10px;
+    color: grey;
 }
 
 .buttonDIV button {
@@ -114,4 +120,13 @@
     height: 45px;
     padding: 0 8px 0 8px;
     cursor: pointer;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+}
+
+.rating span {
+    margin-right: 5px;
 }

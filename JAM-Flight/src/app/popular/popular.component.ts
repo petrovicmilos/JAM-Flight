@@ -25,12 +25,12 @@ export class PopularComponent {
 
   cards = [
     {
-      image: '../assets/madrid.jpg',
+      image: '../assets/Madrid.jpg',
       title: 'Madrid',
       price: 'From $30'
     },
     {
-      image: '../assets/paris.jpg',
+      image: '../assets/Paris.jpg',
       title: 'Paris',
       price: 'From $80'
     },
