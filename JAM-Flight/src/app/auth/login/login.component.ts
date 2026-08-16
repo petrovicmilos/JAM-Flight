@@ -13,34 +13,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-     /* user = {
-      username: '',
-      password: ''
-    };
-    constructor(private router: Router) {}
-  
-    // Define a list of valid user credentials (for demonstration purposes).
-    validUsers = [
-      { username: 'user1', password: 'password1' },
-      { username: 'user2', password: 'password2' }
-    ];
-  
-    loginFailed = false;
-  
-    login() {
-      // Simulate a client-side login with validation.
-      const foundUser = this.validUsers.find(user => user.username === this.user.username && user.password === this.user.password);
-  
-      if (foundUser) {
-        this.loginFailed = false;
-        // You can navigate to another page or perform further actions on successful login.
-        console.log('Login successful.');
-        this.router.navigate(['']);
-      } else {
-        this.loginFailed = true;
-      }
-    }  */
-
+   
     errorExists = false;
     errorText = "";
 
@@ -68,7 +41,7 @@ export class LoginComponent {
     this.errorExists = false;
     //this.AppComponent.setLoggedIn(true);
     this.DataService.setLoggedInSubject();
-    console.log(this.DataService.loggedInSubject$);
+    // console.log(this.DataService.loggedInSubject$);
     if (this.DataService.loggedInSubject$) {
       this.snackBar.open('Successfull login!', 'Dismiss', {
         duration: 1000,

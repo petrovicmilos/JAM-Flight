@@ -35,12 +35,12 @@ export class PopularComponent {
       price: 'From $80'
     },
     {
-      image: '../assets/shanghai.jpg',
+      image: '../assets/Shanghai.jpg',
       title: 'Shanghai',
       price: '$380'
     },
     {
-      image: '../assets/new york.jpg',
+      image: '../assets/New york.jpg',
       title: 'New York City',
       price: '$170'
     }

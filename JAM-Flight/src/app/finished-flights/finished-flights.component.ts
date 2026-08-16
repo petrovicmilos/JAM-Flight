@@ -45,17 +45,19 @@ export class FinishedFlightsComponent implements OnInit {
   }
 
   handleRatingSubmit(event) {
-    console.log('Ovo je iz finished flights poslato',event);
+    // console.log('Ovo je iz finished flights poslato',event);
     this.snackBar.open('Your rating is submited!', 'Dismiss', {
-      duration: 2000, // Duration in milliseconds
+      duration: 1000, // Duration in milliseconds
       verticalPosition: 'bottom', // Position of the snackbar
       horizontalPosition: 'center', // Position of the snackbar
     });
     setTimeout(() => {
+      
       this.router.navigate(['/flight-details', event.flightArrivalLocation], { 
         state: { rating: event.rating, comment: event.comment, user: event.user },
         replaceUrl: true
       });
+      // console.log(state);
     
     }, 1000);
     

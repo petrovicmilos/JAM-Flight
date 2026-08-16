@@ -20,7 +20,7 @@ export class FlightDetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute, private flightDetailsService: FlightDetailsService, private cartService: CartService, private router: Router, public dataService: DataService) { }
 
   ngOnInit() {
-    console.log('FlightDetailsComponent initialized');
+    // console.log('FlightDetailsComponent initialized');
     // Get the flight details from the service
     /*  this.flightDetailsService.selectedFlight$.subscribe((selectedFlight) => {
        this.flight = selectedFlight;
@@ -40,8 +40,10 @@ export class FlightDetailsComponent implements OnInit {
     this.dataService.loggedInSubject$.subscribe(() => {
       this.loggedInUser = this.dataService.getLoggedInSubject();
     });
+
     
-    const navigation = this.router.getCurrentNavigation();
+    
+    // const navigation = this.router.getCurrentNavigation();
     const state = window.history.state;
     if (state) {
       this.userRating = {

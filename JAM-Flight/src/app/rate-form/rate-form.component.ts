@@ -32,12 +32,12 @@ export class RateFormComponent {
   }
 
   submitRating(): void {
-    console.log('Submitting rating:', {
+    /* console.log('Submitting rating:', {
       flightArrivalLocation: this.flight.arrivalLocation,
       rating: this.rating,
       comment: this.comment,
       user: this.currentUser
-    }); // Dodajemo log za proveru
+    }); */ // Dodajemo log za proveru
     this.onSubmit.emit({
       flightArrivalLocation: this.flight.arrivalLocation,
       rating: this.rating,
