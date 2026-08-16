@@ -57,7 +57,7 @@
     </div>
     <div *ngIf="userRating" class="user-rating">
       <h4>User Rating</h4>
-      <p><strong>{{ userRating.user.name }}</strong> <div class="rating"><span>Rating: {{ flight.rating }} </span><app-star-rating [rating]="userRating.rating"></app-star-rating></div>
+      <p><strong>{{ userRating.user.name }}</strong> <div class="rating"><span>Rating: {{ userRating.rating }} </span><app-star-rating [rating]="userRating.rating"></app-star-rating></div>
       <p>Comment: {{ userRating.comment }}</p>
     </div>
   </div>

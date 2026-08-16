@@ -3,7 +3,7 @@
     <div class="logo"><a [routerLink]="'homepage'">JAMFlights</a></div>
     <div class="buttons">
         <div><a [routerLink]="'journal'" *ngIf="loggedInUser" class="jornal-link">Journal</a></div>
-        <div class="cart">
+        <div class="cart" *ngIf="loggedInUser"> 
             <a class="cart-link" href="#" [routerLink]="'cart'">
                 <span class="cart-count" *ngIf="cartItemCount > 0">{{ cartItemCount }}</span>
                 <i class="cart-icon fas fa-shopping-cart"></i> <!-- Cart icon from Font Awesome -->

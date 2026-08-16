@@ -24,12 +24,12 @@ export class ProfileComponent implements OnInit{
       phone: this.data.user.phone,
       address: this.data.user.address
     };
-    console.log(this.isEditing)
+    // console.log(this.isEditing)
   }
 
   doEdit(){
     this.isEditing = !this.isEditing;
-    console.log(this.isEditing);
+    // console.log(this.isEditing);
   }
 
   finishEditing(form: NgForm){
@@ -40,8 +40,8 @@ export class ProfileComponent implements OnInit{
     this.data.user.phone = this.profileForInput.phone;
     this.data.user.address = this.profileForInput.address;
 
-    console.log(this.data.user);
-    console.log(UserService.dummyUserList);
+    // console.log(this.data.user);
+    // console.log(UserService.dummyUserList);
     this.isEditing = false;
   }
 

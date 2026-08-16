@@ -11,7 +11,7 @@ export class DataService {
     {
       id: 0,
       airline: 'Turkish Airlines',
-      departureDate: '2024-02-15',
+      departureDate: '2024-06-10',
       departureTime: '10:00',
       arrivalTime: '12:00',
       departureLocation: 'Belgrade',
@@ -28,7 +28,7 @@ export class DataService {
     {
       id: 1,
       airline: 'Emirates',
-      departureDate: '2024-02-16',
+      departureDate: '2024-06-11',
       departureTime: '12:30',
       arrivalTime: '15:30',
       departureLocation: 'Belgrade',
@@ -45,7 +45,7 @@ export class DataService {
     {
       id: 2,
       airline: 'Lufthansa',
-      departureDate: '2024-02-17',
+      departureDate: '2024-06-12',
       departureTime: '14:00',
       arrivalTime: '16:30',
       departureLocation: 'Belgrade',
@@ -62,7 +62,7 @@ export class DataService {
     {
       id: 3,
       airline: 'Qatar Airways',
-      departureDate: '2024-02-18',
+      departureDate: '2024-06-13',
       departureTime: '08:00',
       arrivalTime: '12:00',
       departureLocation: 'Belgrade',
@@ -79,7 +79,7 @@ export class DataService {
     {
       id: 4,
       airline: 'Delta Air Lines',
-      departureDate: '2024-02-19',
+      departureDate: '2024-07-19',
       departureTime: '13:00',
       arrivalTime: '15:30',
       departureLocation: 'Belgrade',
@@ -96,7 +96,7 @@ export class DataService {
     {
       id: 5,
       airline: 'British Airways',
-      departureDate: '2024-02-20',
+      departureDate: '2024-07-20',
       departureTime: '16:00',
       arrivalTime: '19:00',
       departureLocation: 'Belgrade',
@@ -113,7 +113,7 @@ export class DataService {
     {
       id: 6,
       airline: 'American Airlines',
-      departureDate: '2024-02-21',
+      departureDate: '2024-07-21',
       departureTime: '10:30',
       arrivalTime: '12:30',
       departureLocation: 'Belgrade',
@@ -130,7 +130,7 @@ export class DataService {
     {
       id: 7,
       airline: 'Singapore Airlines',
-      departureDate: '2024-02-22',
+      departureDate: '2024-07-22',
       departureTime: '15:30',
       arrivalTime: '19:00',
       departureLocation: 'Belgrade',
@@ -147,7 +147,7 @@ export class DataService {
     {
       id: 8,
       airline: 'Air France',
-      departureDate: '2024-02-23',
+      departureDate: '2024-07-23',
       departureTime: '14:00',
       arrivalTime: '16:30',
       departureLocation: 'Belgrade',
@@ -164,7 +164,7 @@ export class DataService {
     {
       id: 9,
       airline: 'Cathay Pacific',
-      departureDate: '2024-02-24',
+      departureDate: '2024-07-24',
       departureTime: '11:00',
       arrivalTime: '15:00',
       departureLocation: 'Belgrade',
@@ -200,7 +200,7 @@ export class DataService {
     );
   }
 
-  //private loggedInSubject : BehaviorSubject<boolean>;
+  
   private loggedInSubject = new BehaviorSubject<boolean>(false);
   loggedInSubject$ = this.loggedInSubject.asObservable();
   public setLoggedInSubject(){

@@ -73,8 +73,8 @@ export class CartService {
     const currentPendingFlights = this.pendingFlightsSubject.value.filter(f => f.id !== flight.id);
     this.pendingFlightsSubject.next(currentPendingFlights);
 
-    const currentCanceledFlights = this.canceledFlightsSubject.value || [];
-    this.canceledFlightsSubject.next([...currentCanceledFlights, flight]);
+    const currentCanceledFlights = this.canceledFlightsSubject.value || []; 
+    this.canceledFlightsSubject.next([...currentCanceledFlights, flight]); 
   }
 
   getCartItems() {
